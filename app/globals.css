@@ -200,7 +200,9 @@ a:hover .arrow-icon { transform: translate(2px, -2px); }
 .design-caption span { color: #718078; font: 9px var(--mono); letter-spacing: 1px; white-space: nowrap; }
 .design-caption h3 { margin: 0; font: 700 24px var(--display); letter-spacing: -1px; }
 .design-caption p { max-width: 520px; justify-self: end; margin: 0; padding-top: 1px; color: #65716a; font-size: 12px; line-height: 1.75; }
-.cavite-caption p a { display: inline-flex; margin-top: 14px; color: #8f2d32; }
+.cavite-caption p a { display: inline-flex; margin-top: 14px; color: #e73b42; font-weight: 700; }
+.cavite-caption p a strong { color: #e73b42; }
+.cavite-caption p a:hover { color: #b52d34; }
 
 .screenshot-board { min-height: 620px; background: #e7e9df; overflow: visible; }
 .screenshot-gallery { position: absolute; inset: 34px; }

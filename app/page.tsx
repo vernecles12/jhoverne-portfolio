@@ -294,6 +294,7 @@ export default function Home() {
 					<p>
 						A warm editorial flower-shop concept featuring an expressive hero,
 						product collection, brand promise, and layered account interface.
+						<a className="case-study-link" href="https://www.figma.com/make/HolPTmatYgxMceCxkBvQMi/Bloom-and-Co-Flower-Shop?t=IicLF2tbegGEWGA7-1" target="_blank" rel="noreferrer"><strong>Explore it ↗</strong></a>
 					</p>
 				</div>
 
