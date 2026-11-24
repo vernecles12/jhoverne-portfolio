@@ -563,7 +563,7 @@ export default function Home() {
 						<a href="mailto:vhaniemorcilla4785@gmail.com" className="contact-item"><span className="contact-label">EMAIL</span><span>vhaniemorcilla4785@gmail.com</span><ArrowUpRight /></a>
 						<a href="tel:+639197750461" className="contact-item"><span className="contact-label">PHONE</span><span>+63 919 775 0461</span><ArrowUpRight /></a>
 						<div className="contact-item contact-static"><span className="contact-label">LOCATION</span><span>Cavite, Philippines</span><span className="location-pin">⌖</span></div>
-						<div className="reference-note">PROFESSIONAL REFERENCES<br /><strong>Available upon request.</strong></div>
+						<div className="reference-note">PROFESSIONAL REFERENCES<br /><strong>Available this soon.</strong></div>
 					</div>
 				</div>
 			</section>
