@@ -152,7 +152,16 @@ export default function Home() {
 							<span>PERSONAL PORTFOLIO</span>
 							<span>2026</span>
 						</div>
-						<img className="portrait" src="/profile.jpg?v=2026" alt="Jhoverne Morcilla" />
+						<img
+							className="portrait"
+							src="/profile.jpg?v=20261124"
+							width="330"
+							height="275"
+							loading="eager"
+							fetchPriority="high"
+							draggable="false"
+							alt="Jhoverne Morcilla"
+						/>
 						<div className="art-card-bottom">
 							<span>IT STUDENT</span>
 							<span>LEARN • BUILD • GROW ↗</span>
