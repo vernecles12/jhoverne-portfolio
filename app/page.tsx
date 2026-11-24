@@ -280,7 +280,6 @@ export default function Home() {
 					className="design-board screenshot-board petal-board"
 					aria-label="Petal and Stem public UI screenshots"
 				>
-					<div className="gallery-name">Flower shop</div>
 					<div className="screenshot-gallery" aria-label="Petal and Stem UI screenshots">
 						<img className="screenshot screenshot-main" src="/Flower%20shop%20(2).png" alt="Flower shop 2 - Petal and Stem interface" />
 						<img className="screenshot screenshot-detail screenshot-detail-one" src="/Flower%20shop%20(3).png" alt="Flower shop 3 - Petal and Stem collection" />
@@ -375,7 +374,6 @@ export default function Home() {
 					aria-label="Layered Verne Tastes bakery and cake shop UI design draft"
 				>
 					<div className="design-board screenshot-board verne-gallery-board" aria-label="Verne Tastes public UI screenshots">
-						<div className="gallery-name">Verne' Tastes</div>
 						<div className="screenshot-gallery">
 							<img className="screenshot screenshot-main" src="/Verne%27%20Tastes%20(1).png" alt="Verne Tastes 1 - storefront" />
 							<img className="screenshot screenshot-detail screenshot-detail-one" src="/Verne%27%20Tastes%20(2).png" alt="Verne Tastes 2 - cake collection" />
@@ -480,7 +478,6 @@ export default function Home() {
 					</a>
 
 					<div className="design-board screenshot-board cavite-gallery-board" aria-label="CAVITE MotoTech public QA screenshots">
-						<div className="gallery-name">CAVITE MotoTech / MOTO CVT</div>
 						<div className="screenshot-gallery">
 							<img className="screenshot screenshot-main" src="/MOTO%20CVT.png" alt="MOTO CVT - main thesis dashboard" />
 							<img className="screenshot screenshot-detail screenshot-detail-one" src="/MOTO%20CVT%20(1).png" alt="MOTO CVT 1 - workshop directory" />
@@ -509,6 +506,24 @@ export default function Home() {
 						<h3>National College of Science and Technology</h3>
 						<p>Bachelor of Science in Information Technology</p>
 						<div className="education-location"><span className="location-dot" /> Cavite, Philippines</div>
+					</article>
+				</div>
+
+				<div className="continuing-education">
+					<div className="continuing-heading">
+						<div>
+							<p className="eyebrow">CONTINUING EDUCATION</p>
+							<h2>Course<br /><em>Certificates.</em></h2>
+						</div>
+						<p>Professional learning and completed courses that strengthen my software-development foundation.</p>
+					</div>
+					<article className="certificate-card">
+						<img src="/javascript%20cert.png" alt="JavaScript course certificate" />
+						<div className="certificate-caption">
+							<span>COURSE CERTIFICATE</span>
+							<h3>Introduction to JavaScript</h3>
+							<p>SoloLearn · Issued 20 June 2024</p>
+						</div>
 					</article>
 				</div>
 			</section>
