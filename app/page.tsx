@@ -280,10 +280,14 @@ export default function Home() {
 					className="design-board screenshot-board petal-board"
 					aria-label="Petal and Stem public UI screenshots"
 				>
+					<div className="gallery-name">Flower shop</div>
 					<div className="screenshot-gallery" aria-label="Petal and Stem UI screenshots">
-						<img className="screenshot screenshot-main" src="/Flower%20shop%20(2).png" alt="Petal and Stem flower collection interface" />
-						<img className="screenshot screenshot-detail screenshot-detail-one" src="/Flower%20shop%20(3).png" alt="Petal and Stem collection details" />
-						<img className="screenshot screenshot-detail screenshot-detail-two" src="/Flower%20shop%20(1).png" alt="Petal and Stem flower edit interface" />
+						<img className="screenshot screenshot-main" src="/Flower%20shop%20(2).png" alt="Flower shop 2 - Petal and Stem interface" />
+						<img className="screenshot screenshot-detail screenshot-detail-one" src="/Flower%20shop%20(3).png" alt="Flower shop 3 - Petal and Stem collection" />
+						<img className="screenshot screenshot-detail screenshot-detail-two" src="/Flower%20shop%20(1).png" alt="Flower shop 1 - Petal and Stem edit" />
+						<img className="screenshot screenshot-detail extra-1" src="/Flower%20shop%20(4).png" alt="Flower shop 4 - Petal and Stem account" />
+						<img className="screenshot screenshot-detail extra-2" src="/Flower%20shop%20(5).png" alt="Flower shop 5 - Petal and Stem details" />
+						<img className="screenshot screenshot-detail extra-3" src="/Flower%20shop%20(6).png" alt="Flower shop 6 - Petal and Stem checkout" />
 					</div>
 				</div>
 				<div className="design-caption">
@@ -304,9 +308,13 @@ export default function Home() {
 				>
 					<div className="design-board screenshot-board jhocoffee-gallery-board" aria-label="Jhocoffee public UI screenshots">
 						<div className="screenshot-gallery">
-							<img className="screenshot screenshot-main" src="/JhoCoffee%20(6).png" alt="Jhocoffee desktop storefront" />
-							<img className="screenshot screenshot-detail screenshot-detail-one" src="/JhoCoffee%20(3).png" alt="Jhocoffee coffee menu" />
-							<img className="screenshot screenshot-detail screenshot-detail-two" src="/JhoCoffee%20(4).png" alt="Jhocoffee account interface" />
+							<img className="screenshot screenshot-main" src="/JhoCoffee%20(6).png" alt="JhoCoffee 6 - desktop storefront" />
+							<img className="screenshot screenshot-detail screenshot-detail-one" src="/JhoCoffee%20(3).png" alt="JhoCoffee 3 - coffee menu" />
+							<img className="screenshot screenshot-detail screenshot-detail-two" src="/JhoCoffee%20(4).png" alt="JhoCoffee 4 - account interface" />
+							<img className="screenshot screenshot-detail extra-1" src="/JhoCoffee%20(1).png" alt="JhoCoffee 1 - interface detail" />
+							<img className="screenshot screenshot-detail extra-2" src="/JhoCoffee%20(2).png" alt="JhoCoffee 2 - storefront detail" />
+							<img className="screenshot screenshot-detail extra-3" src="/JhoCoffee%20(5).png" alt="JhoCoffee 5 - sign in interface" />
+							<img className="screenshot screenshot-detail extra-4" src="/JhoCoffee%20(7).png" alt="JhoCoffee 7 - additional interface" />
 						</div>
 					</div>
 
@@ -358,6 +366,7 @@ export default function Home() {
 					<p>
 						A cozy café storefront concept with a calm editorial layout,
 						featured drinks, a full menu preview, and a layered sign-in experience.
+						<a className="case-study-link" href="https://www.figma.com/design/pDnDO36JdqRY8Fb2P3yCdM/Untitled?t=IicLF2tbegGEWGA7-1" target="_blank" rel="noreferrer"><strong>Explore it ↗</strong></a>
 					</p>
 				</div>
 
@@ -366,10 +375,14 @@ export default function Home() {
 					aria-label="Layered Verne Tastes bakery and cake shop UI design draft"
 				>
 					<div className="design-board screenshot-board verne-gallery-board" aria-label="Verne Tastes public UI screenshots">
+						<div className="gallery-name">Verne' Tastes</div>
 						<div className="screenshot-gallery">
-							<img className="screenshot screenshot-main" src="/Verne%27%20Tastes%20(1).png" alt="Verne Tastes storefront" />
-							<img className="screenshot screenshot-detail screenshot-detail-one" src="/Verne%27%20Tastes%20(3).png" alt="Verne Tastes cake collection" />
-							<img className="screenshot screenshot-detail screenshot-detail-two" src="/Verne%27%20Tastes%20(5).png" alt="Verne Tastes account interface" />
+							<img className="screenshot screenshot-main" src="/Verne%27%20Tastes%20(1).png" alt="Verne Tastes 1 - storefront" />
+							<img className="screenshot screenshot-detail screenshot-detail-one" src="/Verne%27%20Tastes%20(2).png" alt="Verne Tastes 2 - cake collection" />
+							<img className="screenshot screenshot-detail screenshot-detail-two" src="/Verne%27%20Tastes%20(3).png" alt="Verne Tastes 3 - collection detail" />
+							<img className="screenshot screenshot-detail extra-1" src="/Verne%27%20Tastes%20(4).png" alt="Verne Tastes 4 - interface detail" />
+							<img className="screenshot screenshot-detail extra-2" src="/Verne%27%20Tastes%20(5).png" alt="Verne Tastes 5 - account interface" />
+							<img className="screenshot screenshot-detail extra-3" src="/Verne%27%20Tastes%20(6).png" alt="Verne Tastes 6 - additional interface" />
 						</div>
 					</div>
 
@@ -407,17 +420,20 @@ export default function Home() {
 
 					<div className="design-tag"><span>CONCEPT 03</span><strong>Verne&apos; Tastes</strong></div>
 				</div>
+			</section>
 
-				<div className="design-caption verne-caption">
+			<section className="selected-works-section section-wrap" id="selected-works">
+				<div className="section-heading">
+					<span className="section-index">04 / SELECTED WORKS</span>
+					<span className="section-rule" />
+				</div>
+
+				<div className="selected-work-heading">
 					<div>
-						<span>PERSONAL UI DESIGN / 03</span>
-						<h3>Verne&apos; Tastes</h3>
+						<p className="eyebrow">THESIS PLATFORM / 2026</p>
+						<h2>CAVITE<br /><em>MotoTech.</em></h2>
 					</div>
-					<p>
-						A warm artisan bakery concept combining elegant cake photography,
-						curated product cards, celebratory storytelling, and a layered account panel.
-						<a className="case-study-link" href="https://www.figma.com/design/NloAW4LVuFRC5HWgb0xNik/Untitled?node-id=0-1&amp;t=Jh0QiKCQ4IHSoEsE-1" target="_blank" rel="noreferrer"><strong>Explore it ↗</strong></a>
-					</p>
+					<p>A motorcycle parts and repair platform connecting Cavite riders with verified shops, searchable parts, workshop services, bookings, and account tools.</p>
 				</div>
 
 				<div className="design-board cavite-board" aria-label="CAVITE MotoTech 2026 thesis platform QA case study">
@@ -461,23 +477,16 @@ export default function Home() {
 					</a>
 
 					<div className="design-board screenshot-board cavite-gallery-board" aria-label="CAVITE MotoTech public QA screenshots">
+						<div className="gallery-name">CAVITE MotoTech / MOTO CVT</div>
 						<div className="screenshot-gallery">
-							<img className="screenshot screenshot-main" src="/MOTO%20CVT.png" alt="CAVITE MotoTech main dashboard" />
-							<img className="screenshot screenshot-detail screenshot-detail-one" src="/MOTO%20CVT%20(1).png" alt="CAVITE MotoTech workshop directory" />
-							<img className="screenshot screenshot-detail screenshot-detail-two" src="/MOTO%20CVT%20(2).png" alt="CAVITE MotoTech account interface" />
+							<img className="screenshot screenshot-main" src="/MOTO%20CVT.png" alt="MOTO CVT - main thesis dashboard" />
+							<img className="screenshot screenshot-detail screenshot-detail-one" src="/MOTO%20CVT%20(1).png" alt="MOTO CVT 1 - workshop directory" />
+							<img className="screenshot screenshot-detail screenshot-detail-two" src="/MOTO%20CVT%20(2).png" alt="MOTO CVT 2 - account interface" />
+							<img className="screenshot screenshot-detail extra-1" src="/MOTO%20CVT%20(3).png" alt="MOTO CVT 3 - parts interface" />
+							<img className="screenshot screenshot-detail extra-2" src="/MOTO%20CVT%20(4).png" alt="MOTO CVT 4 - booking interface" />
+							<img className="screenshot screenshot-detail extra-3" src="/MOTO%20CVT%20(5).png" alt="MOTO CVT 5 - service interface" />
 						</div>
 					</div>
-				</div>
-
-				<div className="design-caption cavite-caption">
-					<div>
-						<span>THESIS PLATFORM / 04</span>
-						<h3>CAVITE MotoTech</h3>
-					</div>
-					<p>
-						A 2026 motorcycle parts and repair platform for Cavite riders, developed to connect users with verified shops, searchable parts, workshop services, and booking features.
-						<a href="https://cavitemototech.ogm1.com/#/" target="_blank" rel="noreferrer"><strong>Explore QA Case Study ↗</strong></a>
-					</p>
 				</div>
 			</section>
 
