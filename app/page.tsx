@@ -418,6 +418,17 @@ export default function Home() {
 
 					<div className="design-tag"><span>CONCEPT 03</span><strong>Verne&apos; Tastes</strong></div>
 				</div>
+				<div className="design-caption verne-caption">
+					<div>
+						<span>PERSONAL UI DESIGN / 03</span>
+						<h3>Verne&apos; Tastes</h3>
+					</div>
+					<p>
+						A warm artisan bakery concept combining elegant cake photography,
+						curated product cards, celebratory storytelling, and a layered account panel.
+						<a className="case-study-link" href="https://www.figma.com/design/NloAW4LVuFRC5HWgb0xNik/Untitled?node-id=0-1&amp;t=Jh0QiKCQ4IHSoEsE-1" target="_blank" rel="noreferrer"><strong>Explore it ↗</strong></a>
+					</p>
+				</div>
 			</section>
 
 			<section className="selected-works-section section-wrap" id="selected-works">
