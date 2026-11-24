@@ -319,3 +319,7 @@ a:hover .arrow-icon { transform: translate(2px, -2px); }
   .screenshot-detail-two { right:5%;bottom:-8px; }
 }
 
+.case-study-link { display: inline-flex; margin-top: 14px; color: #e73b42; font-weight: 700; }
+.case-study-link strong { color: #e73b42; }
+.case-study-link:hover { color: #b52d34; }
+
