@@ -215,7 +215,9 @@ a:hover .arrow-icon { transform: translate(2px, -2px); }
 .cavite-gallery-board { background: #101b18; }
 .cavite-gallery-board .screenshot-main,
 .cavite-gallery-board .screenshot-detail { border-color: rgba(215,251,104,.16); }
-.jhocoffee-board, .verne-board, .cavite-board { display: none; }
+.jhocoffee-board, .verne-board, .cavite-board { display: block; }
+.jhoco-panel, .verne-panel, .cavite-panel, .cavite-qa-tag { display: none; }
+.jhocoffee-board > .design-tag, .verne-board > .design-tag { display: none; }
 
 @media (min-width: 1500px) {
   .hero { min-height: 780px; }

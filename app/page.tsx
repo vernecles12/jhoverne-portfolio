@@ -366,9 +366,9 @@ export default function Home() {
 				>
 					<div className="design-board screenshot-board verne-gallery-board" aria-label="Verne Tastes public UI screenshots">
 						<div className="screenshot-gallery">
-							<img className="screenshot screenshot-main" src="/Verne'%20Tastes%20(2).png" alt="Verne Tastes storefront" />
-							<img className="screenshot screenshot-detail screenshot-detail-one" src="/Verne'%20Tastes%20(3).png" alt="Verne Tastes cake collection" />
-							<img className="screenshot screenshot-detail screenshot-detail-two" src="/Verne'%20Tastes%20(5).png" alt="Verne Tastes account interface" />
+							<img className="screenshot screenshot-main" src="/Verne%27%20Tastes%20(2).png" alt="Verne Tastes storefront" />
+							<img className="screenshot screenshot-detail screenshot-detail-one" src="/Verne%27%20Tastes%20(3).png" alt="Verne Tastes cake collection" />
+							<img className="screenshot screenshot-detail screenshot-detail-two" src="/Verne%27%20Tastes%20(5).png" alt="Verne Tastes account interface" />
 						</div>
 					</div>
 
