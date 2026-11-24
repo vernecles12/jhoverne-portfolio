@@ -349,3 +349,22 @@ a:hover .arrow-icon { transform: translate(2px, -2px); }
   .continuing-education { margin-top:70px; }.continuing-heading { grid-template-columns:1fr; gap:20px; }.continuing-heading > p { justify-self:start; }.certificate-card { grid-template-columns:1fr; }.certificate-card img { height:auto; }.certificate-caption { padding:24px; }
 }
 
+.jhocoffee-gallery-board .screenshot-main {
+  width: 72%;
+  height: 340px;
+  left: 0;
+  top: 8px;
+}
+.jhocoffee-gallery-board .screenshot-detail-one {
+  width: 46%;
+  height: 150px;
+  right: 0;
+  top: 50px;
+}
+.jhocoffee-gallery-board .screenshot-detail-two {
+  width: 48%;
+  height: 145px;
+  right: 3%;
+  bottom: 8px;
+}
+
