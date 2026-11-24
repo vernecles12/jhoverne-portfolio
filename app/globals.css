@@ -338,4 +338,7 @@ a:hover .arrow-icon { transform: translate(2px, -2px); }
 .case-study-link { display: inline-flex; margin-top: 14px; color: #e73b42; font-weight: 700; }
 .case-study-link strong { color: #e73b42; }
 .case-study-link:hover { color: #b52d34; }
+.live-website-link { display:inline-flex; align-items:center; justify-content:center; min-height:42px; padding:0 16px; margin-top:18px; background:#e73b42; color:#fff !important; border-radius:3px; }
+.live-website-link strong { color:#fff; }
+.live-website-link:hover { background:#b52d34; color:#fff !important; }
 

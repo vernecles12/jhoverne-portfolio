@@ -433,7 +433,10 @@ export default function Home() {
 						<p className="eyebrow">THESIS PLATFORM / 2026</p>
 						<h2>CAVITE<br /><em>MotoTech.</em></h2>
 					</div>
-					<p>A motorcycle parts and repair platform connecting Cavite riders with verified shops, searchable parts, workshop services, bookings, and account tools.</p>
+					<p>
+						A motorcycle parts and repair platform connecting Cavite riders with verified shops, searchable parts, workshop services, bookings, and account tools.
+						<a className="case-study-link live-website-link" href="https://cavitemototech.ogm1.com/#/" target="_blank" rel="noreferrer"><strong>Live Website ↗</strong></a>
+					</p>
 				</div>
 
 				<div className="design-board cavite-board" aria-label="CAVITE MotoTech 2026 thesis platform QA case study">
