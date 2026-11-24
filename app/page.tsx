@@ -303,9 +303,9 @@ export default function Home() {
 				>
 					<div className="design-board screenshot-board jhocoffee-gallery-board" aria-label="Jhocoffee public UI screenshots">
 						<div className="screenshot-gallery">
-							<img className="screenshot screenshot-main" src="/JhoCoffee%20(2).png" alt="Jhocoffee desktop storefront" />
+							<img className="screenshot screenshot-main" src="/JhoCoffee%20(6).png" alt="Jhocoffee desktop storefront" />
 							<img className="screenshot screenshot-detail screenshot-detail-one" src="/JhoCoffee%20(3).png" alt="Jhocoffee coffee menu" />
-							<img className="screenshot screenshot-detail screenshot-detail-two" src="/JhoCoffee%20(5).png" alt="Jhocoffee account interface" />
+							<img className="screenshot screenshot-detail screenshot-detail-two" src="/JhoCoffee%20(4).png" alt="Jhocoffee account interface" />
 						</div>
 					</div>
 
@@ -366,7 +366,7 @@ export default function Home() {
 				>
 					<div className="design-board screenshot-board verne-gallery-board" aria-label="Verne Tastes public UI screenshots">
 						<div className="screenshot-gallery">
-							<img className="screenshot screenshot-main" src="/Verne%27%20Tastes%20(2).png" alt="Verne Tastes storefront" />
+							<img className="screenshot screenshot-main" src="/Verne%27%20Tastes%20(1).png" alt="Verne Tastes storefront" />
 							<img className="screenshot screenshot-detail screenshot-detail-one" src="/Verne%27%20Tastes%20(3).png" alt="Verne Tastes cake collection" />
 							<img className="screenshot screenshot-detail screenshot-detail-two" src="/Verne%27%20Tastes%20(5).png" alt="Verne Tastes account interface" />
 						</div>
@@ -415,6 +415,7 @@ export default function Home() {
 					<p>
 						A warm artisan bakery concept combining elegant cake photography,
 						curated product cards, celebratory storytelling, and a layered account panel.
+						<a className="case-study-link" href="https://www.figma.com/design/NloAW4LVuFRC5HWgb0xNik/Untitled?node-id=0-1&amp;t=Jh0QiKCQ4IHSoEsE-1" target="_blank" rel="noreferrer"><strong>Explore it ↗</strong></a>
 					</p>
 				</div>
 
