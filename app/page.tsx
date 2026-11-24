@@ -152,7 +152,7 @@ export default function Home() {
 							<span>PERSONAL PORTFOLIO</span>
 							<span>2026</span>
 						</div>
-						<img className="portrait" src="/profile.jpg" alt="Jhoverne Morcilla" />
+						<img className="portrait" src="/profile.jpg?v=2026" alt="Jhoverne Morcilla" />
 						<div className="art-card-bottom">
 							<span>IT STUDENT</span>
 							<span>LEARN • BUILD • GROW ↗</span>

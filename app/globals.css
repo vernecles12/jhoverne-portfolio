@@ -59,12 +59,12 @@ a:hover .arrow-icon { transform: translate(2px, -2px); }
 .portrait {
   display: block;
   width: 100%;
-  flex: 1 1 auto;
-  min-height: 0;
-  height: 230px;
+  height: clamp(190px, 21vw, 275px);
+  min-height: 190px;
+  flex: 1 1 clamp(190px, 21vw, 275px);
   margin: 10px 0;
   object-fit: cover;
-  object-position: center 32%;
+  object-position: center 38%;
   background: #b9c3ad;
 }
 .art-card-bottom { flex: 0 0 auto; align-items: center; }
