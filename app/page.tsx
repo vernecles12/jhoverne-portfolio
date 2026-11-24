@@ -277,103 +277,13 @@ export default function Home() {
 				</div>
 
 				<div
-					className="design-board"
-					aria-label="Layered Petal and Stem flower shop UI design draft"
+					className="design-board screenshot-board petal-board"
+					aria-label="Petal and Stem public UI screenshots"
 				>
-					<article className="design-panel design-hero">
-						<header>
-							<span className="petal-brand">
-								✿ <strong>Petal &amp; Stem</strong>
-							</span>
-							<nav>
-								<span>Home</span>
-								<span>Flowers</span>
-								<span>Account</span>
-							</nav>
-						</header>
-						<div className="petal-hero-copy">
-							<small>FLORALS WITH A LITTLE WILDNESS</small>
-							<h3>
-								Flowers,
-								<br />
-								thoughtfully
-								<br />
-								gathered.
-							</h3>
-							<button>
-								Shop the collection <span>→</span>
-							</button>
-						</div>
-						<div className="petal-backdrop" />
-					</article>
-
-					<article className="design-panel design-promise">
-						<span className="panel-label">OUR PROMISE / 01</span>
-						<blockquote>
-							“ No stiff bouquets. Just beautiful flowers that look like they grew
-							together.”
-						</blockquote>
-						<div className="promise-caption">
-							— Mara, founder &amp; head florist
-						</div>
-					</article>
-
-					<article className="design-panel design-products">
-						<div className="product-heading">
-							<span>Showing 6 fresh arrangements</span>
-							<strong>FREE LOCAL DELIVERY OVER $90</strong>
-						</div>
-						<div className="product-grid">
-							<div>
-								<span className="product-badge">FLORIST&apos;S PICK</span>
-								<div className="product-art product-art-one">✿</div>
-								<h4>Apricot Reverie</h4>
-								<p>Garden roses · ranunculus</p>
-							</div>
-							<div>
-								<span className="product-badge">SEASONAL</span>
-								<div className="product-art product-art-two">❧</div>
-								<h4>Wild Meadow</h4>
-								<p>Cosmos · chamomile</p>
-							</div>
-							<div>
-								<span className="product-badge">BESTSELLER</span>
-								<div className="product-art product-art-three">♧</div>
-								<h4>Blush Hour</h4>
-								<p>Peonies · spray roses</p>
-							</div>
-						</div>
-					</article>
-
-					<article className="design-panel design-login">
-						<div className="login-photo">
-							<span>THE STEM SOCIETY</span>
-							<strong>A beautiful reason to come home.</strong>
-						</div>
-						<div className="login-form">
-							<small>WELCOME BACK</small>
-							<h3>Come on in.</h3>
-							<div className="login-tabs">
-								<strong>Login</strong>
-								<span>Register</span>
-							</div>
-							<label>
-								Email address
-								<input value="hello@example.com" readOnly />
-							</label>
-							<label>
-								Password
-								<input value="••••••••" readOnly />
-							</label>
-							<button>
-								Sign in <span>→</span>
-							</button>
-						</div>
-					</article>
-
-					<div className="design-tag">
-						<span>CONCEPT 01</span>
-						<strong>Petal &amp; Stem</strong>
+					<div className="screenshot-gallery" aria-label="Petal and Stem UI screenshots">
+						<img className="screenshot screenshot-main" src="/Flower%20shop%20(2).png" alt="Petal and Stem flower collection interface" />
+						<img className="screenshot screenshot-detail screenshot-detail-one" src="/Flower%20shop%20(3).png" alt="Petal and Stem collection details" />
+						<img className="screenshot screenshot-detail screenshot-detail-two" src="/Flower%20shop%20(1).png" alt="Petal and Stem flower edit interface" />
 					</div>
 				</div>
 				<div className="design-caption">
@@ -391,6 +301,14 @@ export default function Home() {
 					className="design-board jhocoffee-board"
 					aria-label="Layered Jhocoffee café UI design draft"
 				>
+					<div className="design-board screenshot-board jhocoffee-gallery-board" aria-label="Jhocoffee public UI screenshots">
+						<div className="screenshot-gallery">
+							<img className="screenshot screenshot-main" src="/JhoCoffee%20(2).png" alt="Jhocoffee desktop storefront" />
+							<img className="screenshot screenshot-detail screenshot-detail-one" src="/JhoCoffee%20(3).png" alt="Jhocoffee coffee menu" />
+							<img className="screenshot screenshot-detail screenshot-detail-two" src="/JhoCoffee%20(5).png" alt="Jhocoffee account interface" />
+						</div>
+					</div>
+
 					<article className="jhoco-panel jhoco-hero">
 						<header>
 							<span className="jhoco-brand">Jhocoffee.</span>
@@ -446,6 +364,14 @@ export default function Home() {
 					className="design-board verne-board"
 					aria-label="Layered Verne Tastes bakery and cake shop UI design draft"
 				>
+					<div className="design-board screenshot-board verne-gallery-board" aria-label="Verne Tastes public UI screenshots">
+						<div className="screenshot-gallery">
+							<img className="screenshot screenshot-main" src="/Verne'%20Tastes%20(2).png" alt="Verne Tastes storefront" />
+							<img className="screenshot screenshot-detail screenshot-detail-one" src="/Verne'%20Tastes%20(3).png" alt="Verne Tastes cake collection" />
+							<img className="screenshot screenshot-detail screenshot-detail-two" src="/Verne'%20Tastes%20(5).png" alt="Verne Tastes account interface" />
+						</div>
+					</div>
+
 					<article className="verne-panel verne-hero">
 						<header>
 							<span className="verne-brand">Verne&apos; Taste</span>
@@ -531,6 +457,14 @@ export default function Home() {
 					<a className="cavite-qa-tag" href="https://cavitemototech.ogm1.com/#/" target="_blank" rel="noreferrer">
 						<span>QA CASE STUDY</span><strong>Explore live system ↗</strong>
 					</a>
+
+					<div className="design-board screenshot-board cavite-gallery-board" aria-label="CAVITE MotoTech public QA screenshots">
+						<div className="screenshot-gallery">
+							<img className="screenshot screenshot-main" src="/MOTO%20CVT.png" alt="CAVITE MotoTech main dashboard" />
+							<img className="screenshot screenshot-detail screenshot-detail-one" src="/MOTO%20CVT%20(1).png" alt="CAVITE MotoTech workshop directory" />
+							<img className="screenshot screenshot-detail screenshot-detail-two" src="/MOTO%20CVT%20(2).png" alt="CAVITE MotoTech account interface" />
+						</div>
+					</div>
 				</div>
 
 				<div className="design-caption cavite-caption">
