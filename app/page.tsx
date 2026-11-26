@@ -43,6 +43,7 @@ const navItems = [
 	{ label: "About", href: "#about" },
 	{ label: "Skills", href: "#skills" },
 	{ label: "UI Designs", href: "#designs" },
+	{ label: "Selected Works", href: "#selected-works" },
 	{ label: "Education", href: "#education" },
 	{ label: "Contact", href: "#contact" },
 ];
@@ -122,13 +123,16 @@ export default function Home() {
 						<a className="button button-primary" href="#contact">
 							Get in touch <ArrowUpRight />
 						</a>
-						<a
-							className="button button-secondary"
-							href="/resume.pdf"
-							download="Jhoverne-Morcilla-Resume.pdf"
-						>
-							<DownloadIcon /> Download résumé
-						</a>
+							<a className="button button-secondary" href="/resume.pdf" target="_blank" rel="noreferrer">
+								View résumé <ArrowUpRight />
+							</a>
+							<a
+								className="button button-secondary"
+								href="/resume.pdf"
+								download="Jhoverne-Morcilla-Resume.pdf"
+							>
+								<DownloadIcon /> Download résumé
+							</a>
 					</div>
 					<div className="hero-meta">
 						<span>
@@ -178,7 +182,7 @@ export default function Home() {
 
 			<section className="intro section-wrap" id="about">
 				<div className="section-heading">
-					<span className="section-index">01 / ABOUT ME</span>
+						<span className="section-index">01 / ABOUT ME</span>
 					<span className="section-rule" />
 				</div>
 				<div className="intro-layout">
@@ -198,11 +202,12 @@ export default function Home() {
 							I welcome new challenges, value collaboration, and approach each
 							opportunity with responsibility and a willingness to keep learning.
 						</p>
-						<a
-							className="text-link"
-							href="/resume.pdf"
-							download="Jhoverne-Morcilla-Resume.pdf"
-						>
+							<a
+								className="text-link"
+								href="/resume.pdf"
+								target="_blank"
+								rel="noreferrer"
+							>
 							View my résumé <ArrowUpRight />
 						</a>
 					</div>
@@ -212,7 +217,7 @@ export default function Home() {
 			<section className="skills-section" id="skills">
 				<div className="section-wrap">
 					<div className="section-heading section-heading-light">
-						<span className="section-index">02 / TECHNICAL SKILLS</span>
+							<span className="section-index">02 / TECHNICAL SKILLS</span>
 						<span className="section-rule" />
 					</div>
 					<div className="skills-title-row">
@@ -258,7 +263,7 @@ export default function Home() {
 
 			<section className="designs-section section-wrap" id="designs">
 				<div className="section-heading">
-					<span className="section-index">03 / UI DESIGN DRAFTS</span>
+						<span className="section-index">03 / UI DESIGN DRAFTS</span>
 					<span className="section-rule" />
 				</div>
 				<div className="designs-heading">
@@ -454,7 +459,7 @@ export default function Home() {
 
 			<section className="selected-works-section section-wrap" id="selected-works">
 				<div className="section-heading">
-					<span className="section-index">05 / SELECTED WORKS</span>
+						<span className="section-index">05 / SELECTED WORKS</span>
 					<span className="section-rule" />
 				</div>
 
@@ -524,7 +529,7 @@ export default function Home() {
 
 			<section className="education-section section-wrap" id="education">
 				<div className="section-heading">
-					<span className="section-index">06 / EDUCATION</span>
+						<span className="section-index">06 / EDUCATION</span>
 					<span className="section-rule" />
 				</div>
 				<div className="education-layout">
@@ -537,6 +542,7 @@ export default function Home() {
 						<div className="education-monogram">NCST</div>
 						<h3>National College of Science and Technology</h3>
 						<p>Bachelor of Science in Information Technology</p>
+						<p className="education-dates">Sept 2023 - 2027</p>
 						<div className="education-location"><span className="location-dot" /> Cavite, Philippines</div>
 					</article>
 				</div>
@@ -562,7 +568,7 @@ export default function Home() {
 
 			<section className="objective-section">
 				<div className="objective-inner">
-					<span className="section-index">07 / MY OBJECTIVE</span>
+						<span className="section-index">07 / MY OBJECTIVE</span>
 					<p className="objective-quote">“I aim to contribute my knowledge, dedication, and willingness to learn while preparing myself for future career opportunities.”</p>
 					<span className="objective-note">READY FOR THE NEXT LEARNING OPPORTUNITY</span>
 				</div>
@@ -570,7 +576,7 @@ export default function Home() {
 
 			<section className="contact-section section-wrap" id="contact">
 				<div className="section-heading">
-					<span className="section-index">08 / CONTACT</span>
+						<span className="section-index">08 / CONTACT</span>
 					<span className="section-rule" />
 				</div>
 				<div className="contact-layout">
