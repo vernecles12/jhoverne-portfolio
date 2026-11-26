@@ -1542,8 +1542,9 @@ button:focus-visible {
 }
 
 .recruiter-skills-panel {
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
+  width: auto;
+  margin-left: -12.8%;
+  margin-right: -12.8%;
   padding: 68px 10.2vw 58px;
   background: #101411;
   color: #f6f7f3;
@@ -1613,9 +1614,10 @@ button:focus-visible {
 
 .recruiter-skill-tools {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(62px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(62px, 78px));
   align-items: start;
-  gap: 14px 10px;
+  gap: 14px 24px;
+  justify-content: start;
 }
 
 .recruiter-skill-tool {
@@ -1627,17 +1629,7 @@ button:focus-visible {
   text-align: center;
 }
 
-.recruiter-skill-mark {
-  width: 32px;
-  height: 32px;
-  display: grid;
-  place-items: center;
-  border: 1px solid rgba(246, 247, 243, .36);
-  border-radius: 7px;
-  color: #f6f7f3;
-  font: 700 11px/1 var(--mono);
-  letter-spacing: -.5px;
-}
+.recruiter-skill-logo { width: 36px; height: 36px; display: block; flex: 0 0 36px; }
 
 .recruiter-skill-name {
   max-width: 88px;
@@ -1648,7 +1640,16 @@ button:focus-visible {
 }
 
 @media (max-width: 1050px) {
-  .recruiter-skills-panel { padding-right: 7vw; padding-left: 7vw; }
+  .recruiter-skills-panel {
+    margin-right: -8.14%;
+    margin-left: -8.14%;
+    padding-right: 7vw;
+    padding-left: 7vw;
+  }
+}
+
+@media (min-width: 1500px) {
+  .recruiter-skills-panel { margin-right: calc((1180px - 100vw) / 2); margin-left: calc((1180px - 100vw) / 2); }
 }
 
 @media (max-width: 760px) {
@@ -1674,7 +1675,7 @@ button:focus-visible {
   }
 
   .recruiter-skill-row-copy p { max-width: 340px; }
-  .recruiter-skill-tools { grid-template-columns: repeat(auto-fit, minmax(58px, 1fr)); gap: 12px 7px; }
-  .recruiter-skill-mark { width: 30px; height: 30px; }
+  .recruiter-skill-tools { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px 6px; }
+  .recruiter-skill-logo { width: 34px; height: 34px; flex-basis: 34px; }
   .recruiter-skill-name { max-width: 76px; font-size: 8px; }
 }
