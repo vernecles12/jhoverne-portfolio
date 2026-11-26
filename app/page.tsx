@@ -115,7 +115,7 @@ export default function Home() {
 						<a className="button button-primary" href="#contact">
 							Get in touch <ArrowUpRight />
 						</a>
-							<a className="button button-secondary" href="/resume">
+							<a className="button button-secondary" href="/resume.pdf" target="_blank" rel="noreferrer">
 								View résumé <ArrowUpRight />
 							</a>
 					</div>
@@ -189,7 +189,7 @@ export default function Home() {
 						</p>
 							<a
 								className="text-link"
-								href="/resume"
+								href="/resume.pdf" target="_blank" rel="noreferrer"
 							>
 							View my résumé <ArrowUpRight />
 						</a>
