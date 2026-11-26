@@ -1478,3 +1478,57 @@ button:focus-visible {
   .recruiter-project-action:hover,
   .case-study-link.project-action-button:hover { transform: none; }
 }
+
+
+/* Keep mobile screenshot boards close to the images' real proportions. */
+@media (max-width: 760px) {
+  .designs-section .design-board,
+  .selected-works-section .design-board,
+  .selected-works-section .cavite-board {
+    min-height: 0;
+  }
+
+  .screenshot-board {
+    height: 320px;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .screenshot-gallery { inset: 14px; }
+
+  .screenshot-board .screenshot-main {
+    width: 76%;
+    height: auto;
+    max-width: 76%;
+    max-height: 260px;
+    left: 0;
+    top: 0;
+    object-fit: contain;
+    object-position: top left;
+  }
+
+  .screenshot-board .screenshot-detail {
+    width: 42%;
+    height: auto;
+    max-height: 145px;
+    object-fit: contain;
+    object-position: top center;
+  }
+
+  .screenshot-board .screenshot-detail-one {
+    right: 0;
+    top: 34px;
+  }
+
+  .screenshot-board .screenshot-detail-two {
+    right: 4%;
+    bottom: 8px;
+  }
+
+  .screenshot-board .screenshot-detail.extra-1,
+  .screenshot-board .screenshot-detail.extra-2,
+  .screenshot-board .screenshot-detail.extra-3,
+  .screenshot-board .screenshot-detail.extra-4 {
+    display: none;
+  }
+}
