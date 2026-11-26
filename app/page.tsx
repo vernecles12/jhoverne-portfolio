@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const skillGroups = [
 	{
@@ -112,6 +112,7 @@ const navItems = [
 ];
 
 type ViewMode = "recruiter" | "portfolio";
+type ThemeMode = "light" | "dark";
 
 function ArrowUpRight() {
 	return (
@@ -149,6 +150,26 @@ function PortfolioViewIcon() {
 	);
 }
 
+function ThemeToggle({ theme, onToggle }: { theme: ThemeMode; onToggle: () => void }) {
+	return (
+		<button
+			type="button"
+			className="theme-toggle"
+			aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
+			aria-pressed={theme === "dark"}
+			title={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
+			onClick={onToggle}
+		>
+			{theme === "light" ? (
+				<svg aria-hidden="true" viewBox="0 0 20 20" className="theme-toggle-icon"><path d="M16.4 12.6A7 7 0 0 1 7.4 3.6 7 7 0 1 0 16.4 12.6Z" /></svg>
+			) : (
+				<svg aria-hidden="true" viewBox="0 0 20 20" className="theme-toggle-icon"><circle cx="10" cy="10" r="3.5" /><path d="M10 1.8v2m0 12.4v2M1.8 10h2m12.4 0h2m-14-5.8 1.4 1.4m8.8 8.8 1.4 1.4m0-11.6-1.4 1.4m-8.8 8.8-1.4 1.4" /></svg>
+			)}
+			<span>{theme === "light" ? "Dark" : "Light"}</span>
+		</button>
+	);
+}
+
 function ViewModeSwitcher({ view, onChange }: { view: ViewMode; onChange: (nextView: ViewMode) => void }) {
 	return (
 		<div className="view-mode-switch" role="group" aria-label="Choose a portfolio view">
@@ -176,27 +197,38 @@ function ViewModeSwitcher({ view, onChange }: { view: ViewMode; onChange: (nextV
 
 export default function Home() {
 	const [view, setView] = useState<ViewMode>("portfolio");
+	const [theme, setTheme] = useState<ThemeMode>("light");
+	useEffect(() => {
+		const savedTheme = window.localStorage.getItem("portfolio-theme");
+		if (savedTheme === "light" || savedTheme === "dark") setTheme(savedTheme);
+	}, []);
+
+	const toggleTheme = () => {
+		const nextTheme = theme === "light" ? "dark" : "light";
+		window.localStorage.setItem("portfolio-theme", nextTheme);
+		setTheme(nextTheme);
+	};
 	const changeView = (nextView: ViewMode) => {
 		setView(nextView);
 		window.scrollTo(0, 0);
 	};
 
 	return (
-		<main className="site-shell">
+		<main className="site-shell" data-theme={theme}>
 
 
 			<div key={view} className={`view-stage view-stage-${view}`}>
 				{view === "recruiter" ? (
-					<RecruiterView view={view} onChangeView={changeView} onShowPortfolio={() => changeView("portfolio")} />
+					<RecruiterView view={view} onChangeView={changeView} onShowPortfolio={() => changeView("portfolio")} theme={theme} onToggleTheme={toggleTheme} />
 				) : (
-					<PortfolioView view={view} onChangeView={changeView} />
+					<PortfolioView view={view} onChangeView={changeView} theme={theme} onToggleTheme={toggleTheme} />
 				)}
 			</div>
 		</main>
 	);
 }
 
-function RecruiterView({ view, onChangeView, onShowPortfolio }: { view: ViewMode; onChangeView: (nextView: ViewMode) => void; onShowPortfolio: () => void }) {
+function RecruiterView({ view, onChangeView, onShowPortfolio, theme, onToggleTheme }: { view: ViewMode; onChangeView: (nextView: ViewMode) => void; onShowPortfolio: () => void; theme: ThemeMode; onToggleTheme: () => void }) {
 	return (
 		<div className="recruiter-view">
 			<header className="recruiter-header">
@@ -210,6 +242,8 @@ function RecruiterView({ view, onChangeView, onShowPortfolio }: { view: ViewMode
 					<a href="#recruiter-projects">Projects</a>
 					<a href="#recruiter-personal-projects">Personal Projects</a>
 					<a href="#recruiter-education">Education</a>
+					<a href="#recruiter-contact">Contact</a>
+					<ThemeToggle theme={theme} onToggle={onToggleTheme} />
 				</nav>
 				<details className="recruiter-mobile-menu">
 					<summary aria-label="Open recruiter navigation"><span /><span /></summary>
@@ -219,6 +253,8 @@ function RecruiterView({ view, onChangeView, onShowPortfolio }: { view: ViewMode
 						<a href="#recruiter-projects">Thesis Project</a>
 						<a href="#recruiter-personal-projects">Personal Projects</a>
 						<a href="#recruiter-education">Education</a>
+						<a href="#recruiter-contact">Contact</a>
+						<ThemeToggle theme={theme} onToggle={onToggleTheme} />
 						<div className="mobile-menu-actions">
 							<a className="header-cta" href="mailto:vhaniemorcilla4785@gmail.com">Let&apos;s talk <ArrowUpRight /></a>
 							<ViewModeSwitcher view={view} onChange={onChangeView} />
@@ -370,7 +406,7 @@ function RecruiterView({ view, onChangeView, onShowPortfolio }: { view: ViewMode
 				</div>
 			</section>
 
-			<section className="recruiter-contact">
+			<section className="recruiter-contact" id="recruiter-contact">
 				<div className="recruiter-contact-inner">
 					<div>
 						<span className="recruiter-project-label">READY FOR THE NEXT LEARNING OPPORTUNITY</span>
@@ -394,7 +430,7 @@ function RecruiterView({ view, onChangeView, onShowPortfolio }: { view: ViewMode
 	);
 }
 
-function PortfolioView({ view, onChangeView }: { view: ViewMode; onChangeView: (nextView: ViewMode) => void }) {
+function PortfolioView({ view, onChangeView, theme, onToggleTheme }: { view: ViewMode; onChangeView: (nextView: ViewMode) => void; theme: ThemeMode; onToggleTheme: () => void }) {
 	return (
 		<div className="portfolio-view">
 			<header className="site-header">
@@ -409,6 +445,7 @@ function PortfolioView({ view, onChangeView }: { view: ViewMode; onChangeView: (
 							{item.label}
 						</a>
 					))}
+					<ThemeToggle theme={theme} onToggle={onToggleTheme} />
 				</nav>
 
 				<div className="header-actions">
@@ -427,6 +464,7 @@ function PortfolioView({ view, onChangeView }: { view: ViewMode; onChangeView: (
 								{item.label}
 							</a>
 						))}
+						<ThemeToggle theme={theme} onToggle={onToggleTheme} />
 						<div className="mobile-menu-actions">
 							<a className="header-cta" href="mailto:vhaniemorcilla4785@gmail.com">Let&apos;s talk <ArrowUpRight /></a>
 							<ViewModeSwitcher view={view} onChange={onChangeView} />
