@@ -429,11 +429,32 @@ export default function Home() {
 						<a className="case-study-link" href="https://www.figma.com/design/NloAW4LVuFRC5HWgb0xNik/Untitled?node-id=0-1&amp;t=Jh0QiKCQ4IHSoEsE-1" target="_blank" rel="noreferrer"><strong>Explore it ↗</strong></a>
 					</p>
 				</div>
+
+				<div className="design-caption jclothes-caption">
+					<div>
+						<span>FULL-STACK PROJECT / 04</span>
+						<h3>J Clothes</h3>
+					</div>
+					<p>
+						A PHP-powered clothing storefront focused on considered everyday wear,
+						complete with product browsing, shopping bag interactions, account access,
+						and a responsive editorial shopping experience.
+						<a className="case-study-link live-website-link" href="https://j-clothes-php-shop.vercel.app" target="_blank" rel="noreferrer"><strong>Live Website ↗</strong></a>
+					</p>
+				</div>
+
+				<div className="design-board screenshot-board jclothes-board" aria-label="J Clothes full-stack PHP project screenshots">
+					<div className="screenshot-gallery">
+						<img className="screenshot screenshot-main" src="/j-clothes/J%20Clothes%201%20-%20Home.png" alt="J Clothes 1 - Home page" />
+						<img className="screenshot screenshot-detail screenshot-detail-one" src="/j-clothes/J%20Clothes%202%20-%20Shop.png" alt="J Clothes 2 - Shop page" />
+						<img className="screenshot screenshot-detail screenshot-detail-two" src="/j-clothes/J%20Clothes%203%20-%20Sign%20In.png" alt="J Clothes 3 - Sign in page" />
+					</div>
+				</div>
 			</section>
 
 			<section className="selected-works-section section-wrap" id="selected-works">
 				<div className="section-heading">
-					<span className="section-index">04 / SELECTED WORKS</span>
+					<span className="section-index">05 / SELECTED WORKS</span>
 					<span className="section-rule" />
 				</div>
 
@@ -503,7 +524,7 @@ export default function Home() {
 
 			<section className="education-section section-wrap" id="education">
 				<div className="section-heading">
-					<span className="section-index">05 / EDUCATION</span>
+					<span className="section-index">06 / EDUCATION</span>
 					<span className="section-rule" />
 				</div>
 				<div className="education-layout">
@@ -541,7 +562,7 @@ export default function Home() {
 
 			<section className="objective-section">
 				<div className="objective-inner">
-					<span className="section-index">06 / MY OBJECTIVE</span>
+					<span className="section-index">07 / MY OBJECTIVE</span>
 					<p className="objective-quote">“I aim to contribute my knowledge, dedication, and willingness to learn while preparing myself for future career opportunities.”</p>
 					<span className="objective-note">READY FOR THE NEXT LEARNING OPPORTUNITY</span>
 				</div>
@@ -549,12 +570,12 @@ export default function Home() {
 
 			<section className="contact-section section-wrap" id="contact">
 				<div className="section-heading">
-					<span className="section-index">07 / CONTACT</span>
+					<span className="section-index">08 / CONTACT</span>
 					<span className="section-rule" />
 				</div>
 				<div className="contact-layout">
 					<div>
-						<p className="eyebrow">HAVE AN OJT OPPORTUNITY?</p>
+						<p className="eyebrow">HAVE AN OJTPPORTUNITY?</p>
 						<h2>Let&apos;s make<br /><em>something matter.</em></h2>
 						<p className="contact-intro">I&apos;d be glad to connect and discuss how I can learn, contribute, and grow with your team.</p>
 						<a className="button button-dark" href="mailto:vhaniemorcilla4785@gmail.com">Send me an email <ArrowUpRight /></a>
