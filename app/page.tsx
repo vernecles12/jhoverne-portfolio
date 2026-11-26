@@ -117,6 +117,10 @@ function ViewModeSwitcher({ view, onChange }: { view: ViewMode; onChange: (nextV
 
 export default function Home() {
 	const [view, setView] = useState<ViewMode>("portfolio");
+	const changeView = (nextView: ViewMode) => {
+		setView(nextView);
+		window.scrollTo(0, 0);
+	};
 
 	return (
 		<main className="site-shell">
@@ -124,9 +128,9 @@ export default function Home() {
 
 			<div key={view} className={`view-stage view-stage-${view}`}>
 				{view === "recruiter" ? (
-					<RecruiterView view={view} onChangeView={setView} onShowPortfolio={() => setView("portfolio")} />
+					<RecruiterView view={view} onChangeView={changeView} onShowPortfolio={() => changeView("portfolio")} />
 				) : (
-					<PortfolioView view={view} onChangeView={setView} />
+					<PortfolioView view={view} onChangeView={changeView} />
 				)}
 			</div>
 		</main>
@@ -137,7 +141,7 @@ function RecruiterView({ view, onChangeView, onShowPortfolio }: { view: ViewMode
 	return (
 		<div className="recruiter-view">
 			<header className="recruiter-header">
-				<a className="brand" href="#recruiter-home" aria-label="Jhoverne Morcilla home">
+				<a className="brand" href="#recruiter-about" aria-label="Jhoverne Morcilla home">
 					<span className="brand-mark">JM</span>
 					<span className="brand-name">Jhoverne Morcilla</span>
 				</a>
@@ -168,48 +172,10 @@ function RecruiterView({ view, onChangeView, onShowPortfolio }: { view: ViewMode
 				</div>
 			</header>
 
-			<section className="recruiter-hero" id="recruiter-home">
-				<div className="recruiter-hero-grid" aria-hidden="true" />
-				<div className="recruiter-hero-content">
-					<div className="availability">
-						<span className="status-dot" /> OPEN TO OJT OPPORTUNITIES
-					</div>
-					<p className="hero-kicker">BS INFORMATION TECHNOLOGY STUDENT</p>
-					<h1>Jhoverne <span>Morcilla.</span></h1>
-					<p className="recruiter-lead">
-						I&apos;m an IT student looking for an OJT opportunity where I can put what I&apos;ve learned into practice, keep building my skills, and be a helpful part of the team.
-					</p>
-					<div className="recruiter-hero-actions">
-						<a className="button button-primary" href="/resume.pdf" target="_blank" rel="noreferrer">
-							View resume <ArrowUpRight />
-						</a>
-						<a
-							className="button button-secondary"
-							href="/resume.pdf"
-							download="Jhoverne-Morcilla-Resume.pdf"
-							aria-label="Download resume PDF"
-						>
-							<DownloadIcon /> Download resume
-						</a>
-						<button type="button" className="button button-secondary" onClick={onShowPortfolio}>
-							<PortfolioViewIcon /> View full portfolio
-						</button>
-					</div>
-					<div className="recruiter-hero-meta">
-						<span><strong>LOCATION</strong> Cavite, Philippines</span>
-						<span><strong>EDUCATION</strong> BS Information Technology</span>
-					</div>
-				</div>
-				<div className="recruiter-profile-frame">
-					<div className="recruiter-profile-label"><span>PERSONAL PROFILE</span><span>JM / 2026</span></div>
-					<img src="/profile.jpg?v=20261124" alt="Jhoverne Morcilla" width="420" height="480" />
-					<div className="recruiter-profile-footer">LEARN <span>•</span> BUILD <span>•</span> GROW</div>
-				</div>
-			</section>
 
 			<section className="recruiter-body section-wrap" aria-label="Recruiter information">
 				<div className="recruiter-section-heading">
-					<span className="section-index">01 / PROFESSIONAL SUMMARY</span>
+					<span className="section-index">PROFESSIONAL SUMMARY</span>
 					<span className="section-rule" />
 				</div>
 				<div className="recruiter-summary-grid" id="recruiter-about">
@@ -236,7 +202,7 @@ function RecruiterView({ view, onChangeView, onShowPortfolio }: { view: ViewMode
 				</div>
 
 				<div className="recruiter-section-heading recruiter-heading-spaced" id="recruiter-skills">
-					<span className="section-index">02 / TECHNICAL SKILLS</span>
+					<span className="section-index">TECHNICAL SKILLS</span>
 					<span className="section-rule" />
 				</div>
 				<div className="recruiter-skill-grid">
@@ -257,7 +223,7 @@ function RecruiterView({ view, onChangeView, onShowPortfolio }: { view: ViewMode
 				</div>
 
 				<div className="recruiter-section-heading recruiter-heading-spaced" id="recruiter-projects">
-					<span className="section-index">03 / THESIS PROJECT</span>
+					<span className="section-index">THESIS PROJECT</span>
 					<span className="section-rule" />
 				</div>
 				<div className="recruiter-project-grid recruiter-thesis-grid">
@@ -273,7 +239,7 @@ function RecruiterView({ view, onChangeView, onShowPortfolio }: { view: ViewMode
 				</div>
 
 				<div className="recruiter-section-heading recruiter-heading-spaced" id="recruiter-personal-projects">
-					<span className="section-index">04 / PERSONAL PROJECTS</span>
+					<span className="section-index">PERSONAL PROJECTS</span>
 					<span className="section-rule" />
 				</div>
 				<div className="recruiter-project-grid recruiter-personal-grid">
@@ -316,7 +282,7 @@ function RecruiterView({ view, onChangeView, onShowPortfolio }: { view: ViewMode
 				</div>
 
 				<div className="recruiter-section-heading recruiter-heading-spaced" id="recruiter-education">
-					<span className="section-index">05 / EDUCATION &amp; CERTIFICATE</span>
+					<span className="section-index">EDUCATION &amp; CERTIFICATE</span>
 					<span className="section-rule" />
 				</div>
 				<div className="recruiter-education-grid">
@@ -350,7 +316,7 @@ function RecruiterView({ view, onChangeView, onShowPortfolio }: { view: ViewMode
 			</section>
 
 			<footer className="site-footer recruiter-footer">
-				<a className="footer-brand" href="#recruiter-home">JM<span>.</span></a>
+				<a className="footer-brand" href="#recruiter-about">JM<span>.</span></a>
 				<span>© {new Date().getFullYear()} Jhoverne Morcilla</span>
 				<button type="button" className="recruiter-footer-switch" onClick={onShowPortfolio}>SWITCH TO PORTFOLIO VIEW ↗</button>
 			</footer>
@@ -480,7 +446,7 @@ function PortfolioView({ view, onChangeView }: { view: ViewMode; onChangeView: (
 
 			<section className="intro section-wrap" id="about">
 				<div className="section-heading">
-						<span className="section-index">01 / ABOUT ME</span>
+						<span className="section-index">ABOUT ME</span>
 					<span className="section-rule" />
 				</div>
 				<div className="intro-layout">
@@ -515,7 +481,7 @@ function PortfolioView({ view, onChangeView }: { view: ViewMode; onChangeView: (
 			<section className="skills-section" id="skills">
 				<div className="section-wrap">
 					<div className="section-heading section-heading-light">
-							<span className="section-index">02 / TECHNICAL SKILLS</span>
+							<span className="section-index">TECHNICAL SKILLS</span>
 						<span className="section-rule" />
 					</div>
 					<div className="skills-title-row">
@@ -561,7 +527,7 @@ function PortfolioView({ view, onChangeView }: { view: ViewMode; onChangeView: (
 
 			<section className="designs-section section-wrap" id="designs">
 				<div className="section-heading">
-						<span className="section-index">03 / UI DESIGN DRAFTS</span>
+						<span className="section-index">UI DESIGN DRAFTS</span>
 					<span className="section-rule" />
 				</div>
 				<div className="designs-heading">
@@ -735,7 +701,7 @@ function PortfolioView({ view, onChangeView }: { view: ViewMode; onChangeView: (
 
 			<section className="personal-projects-section section-wrap" id="personal-projects">
 				<div className="section-heading">
-					<span className="section-index">04 / PERSONAL PROJECTS</span>
+					<span className="section-index">PERSONAL PROJECTS</span>
 					<span className="section-rule" />
 				</div>
 				<div className="designs-heading personal-projects-heading">
@@ -767,7 +733,7 @@ function PortfolioView({ view, onChangeView }: { view: ViewMode; onChangeView: (
 
 			<section className="selected-works-section section-wrap" id="selected-works">
 				<div className="section-heading">
-						<span className="section-index">06 / THESIS PROJECT</span>
+						<span className="section-index">THESIS PROJECT</span>
 					<span className="section-rule" />
 				</div>
 
@@ -837,7 +803,7 @@ function PortfolioView({ view, onChangeView }: { view: ViewMode; onChangeView: (
 
 			<section className="education-section section-wrap" id="education">
 				<div className="section-heading">
-						<span className="section-index">06 / EDUCATION</span>
+						<span className="section-index">EDUCATION</span>
 					<span className="section-rule" />
 				</div>
 				<div className="education-layout">
@@ -876,7 +842,7 @@ function PortfolioView({ view, onChangeView }: { view: ViewMode; onChangeView: (
 
 			<section className="objective-section">
 				<div className="objective-inner">
-						<span className="section-index">07 / MY OBJECTIVE</span>
+						<span className="section-index">MY OBJECTIVE</span>
 					<p className="objective-quote">“I aim to contribute my knowledge, dedication, and willingness to learn while preparing myself for future career opportunities.”</p>
 					<span className="objective-note">READY FOR THE NEXT LEARNING OPPORTUNITY</span>
 				</div>
@@ -884,7 +850,7 @@ function PortfolioView({ view, onChangeView }: { view: ViewMode; onChangeView: (
 
 			<section className="contact-section section-wrap" id="contact">
 				<div className="section-heading">
-						<span className="section-index">08 / CONTACT</span>
+						<span className="section-index">CONTACT</span>
 					<span className="section-rule" />
 				</div>
 				<div className="contact-layout">
