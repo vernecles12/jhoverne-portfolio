@@ -244,7 +244,7 @@ function RecruiterView({ view, onChangeView, onShowPortfolio }: { view: ViewMode
 				</div>
 				<div className="recruiter-project-grid recruiter-personal-grid">
 					<article className="recruiter-project-card">
-						<img className="recruiter-project-image" src="/recruiter-images/j-clothes-landing.png" alt="J Clothes landing page" width="1352" height="686" loading="lazy" />
+						<img className="recruiter-project-image" src="/recruiter-images/j-clothes-landing.png" alt="J Clothes landing page" width="1031" height="591" loading="lazy" />
 						<div className="recruiter-project-copy">
 							<span className="recruiter-project-label">PERSONAL PROJECT / FULL-STACK</span>
 							<h3>J Clothes</h3>
