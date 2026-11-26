@@ -33,6 +33,23 @@ const skillGroups = [
 	},
 ];
 
+const skillMarks: Record<string, string> = {
+	HTML: "5",
+	CSS: "3",
+	JavaScript: "JS",
+	PHP: "php",
+	MySQL: "DB",
+	Python: "Py",
+	"Database Management": "DB",
+	Figma: "F",
+	"UI Design": "UI",
+	Prototyping: "PX",
+	"Basic Troubleshooting": "IT",
+	Word: "W",
+	Excel: "X",
+	PowerPoint: "P",
+};
+
 const strengths = [
 	"Willingness to learn",
 	"Time management",
@@ -201,22 +218,33 @@ function RecruiterView({ view, onChangeView, onShowPortfolio }: { view: ViewMode
 					</aside>
 				</div>
 
-				<div className="recruiter-section-heading recruiter-heading-spaced" id="recruiter-skills">
-					<span className="section-index">TECHNICAL SKILLS</span>
-					<span className="section-rule" />
-				</div>
-				<div className="recruiter-skill-grid">
-					{skillGroups.map((group) => (
-						<article className="recruiter-skill-card" key={group.number}>
-							<span className="recruiter-card-number">{group.number}</span>
-							<h3>{group.title}</h3>
-							<p>{group.description}</p>
-							<div className="tag-list">
-								{group.tags.map((tag) => <span className="tag" key={tag}>{tag}</span>)}
-							</div>
-						</article>
-					))}
-				</div>
+				<section className="recruiter-skills-panel recruiter-heading-spaced" id="recruiter-skills" aria-labelledby="recruiter-skills-title">
+					<div className="recruiter-skills-inner">
+						<div className="recruiter-skills-heading">
+							<span className="recruiter-skills-eyebrow">TECHNICAL SKILLS</span>
+							<h2 id="recruiter-skills-title">Technical range.</h2>
+							<p>Tools and skills I have practiced through coursework and personal projects.</p>
+						</div>
+						<div className="recruiter-skill-rows">
+							{skillGroups.map((group) => (
+								<article className="recruiter-skill-row" key={group.number}>
+									<div className="recruiter-skill-row-copy">
+										<h3>{group.title}</h3>
+										<p>{group.description}</p>
+									</div>
+									<div className="recruiter-skill-tools">
+										{group.tags.map((tag) => (
+											<div className="recruiter-skill-tool" key={tag}>
+												<span className="recruiter-skill-mark" aria-hidden="true">{skillMarks[tag]}</span>
+												<span className="recruiter-skill-name">{tag}</span>
+											</div>
+										))}
+									</div>
+								</article>
+							))}
+						</div>
+					</div>
+				</section>
 				<div className="recruiter-strengths">
 					<strong>PERSONAL STRENGTHS</strong>
 					<div>{strengths.map((strength) => <span key={strength}>{strength}</span>)}</div>
