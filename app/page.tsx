@@ -262,7 +262,7 @@ function RecruiterView({ view, onChangeView, onShowPortfolio }: { view: ViewMode
 				</div>
 				<div className="recruiter-project-grid recruiter-thesis-grid">
 					<article className="recruiter-project-card recruiter-project-featured">
-						<img className="recruiter-project-image" src="/MOTO%20CVT.png" alt="CAVITE MotoTech thesis platform landing page" width="1360" height="680" loading="lazy" />
+						<img className="recruiter-project-image" src="/recruiter-images/cavite-mototech-landing.webp" alt="CAVITE MotoTech landing page" width="1360" height="680" loading="lazy" />
 						<div className="recruiter-project-copy">
 							<span className="recruiter-project-label">THESIS PLATFORM / 2026</span>
 							<h3>CAVITE MotoTech</h3>
@@ -287,7 +287,7 @@ function RecruiterView({ view, onChangeView, onShowPortfolio }: { view: ViewMode
 						</div>
 					</article>
 					<article className="recruiter-project-card">
-						<img className="recruiter-project-image" src="/Flower%20shop%20(2).png" alt="Petal and Stem flower shop landing page" width="1363" height="682" loading="lazy" />
+						<img className="recruiter-project-image" src="/recruiter-images/petal-stem-landing.webp" alt="Petal & Stem landing page" width="1363" height="682" loading="lazy" />
 						<div className="recruiter-project-copy">
 							<span className="recruiter-project-label">PERSONAL UI DESIGN / 01</span>
 							<h3>Petal &amp; Stem</h3>
