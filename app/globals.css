@@ -1279,3 +1279,15 @@ button:focus-visible {
   .mobile-menu-actions { flex-direction: row; align-items: center; }
   .mobile-menu-actions .header-cta { display: inline-flex; }
 }
+
+@media (max-width: 900px) {
+  .recruiter-mobile-menu .mobile-menu-actions .header-cta {
+    width: auto;
+    flex: 0 0 auto;
+  }
+  .recruiter-mobile-menu .mobile-menu-actions .view-mode-switch {
+    width: auto;
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+}
