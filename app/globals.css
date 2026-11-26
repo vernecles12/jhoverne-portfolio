@@ -1122,13 +1122,14 @@ button:focus-visible {
 .recruiter-mobile-menu { display: none; }
 .mobile-menu-actions {
   display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  gap: 10px;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
   margin-top: 12px;
 }
-.mobile-menu-actions .view-mode-switch { width: 100%; justify-content: center; }
-.mobile-menu-actions .view-mode-button { flex: 1; justify-content: center; }
+.mobile-menu-actions .header-cta { display: inline-flex; flex: 0 0 auto; width: auto; min-height: 38px; padding: 0 10px; font-size: 10px; }
+.mobile-menu-actions .view-mode-switch { flex: 1; width: auto; min-width: 0; justify-content: center; }
+.mobile-menu-actions .view-mode-button { flex: 1; min-width: 0; justify-content: center; padding: 0 5px; font-size: 9px; }
 
 /* Give the hero actions a clear gap after the introductory copy. */
 .hero-actions { margin-top: 20px; }
@@ -1178,6 +1179,7 @@ button:focus-visible {
 @media (max-width: 900px) {
   .site-header { padding-left: 4%; padding-right: 4%; }
   .site-header .desktop-nav,
+  .site-header .header-actions,
   .recruiter-nav,
   .recruiter-header .header-actions { display: none; }
   .mobile-menu,
@@ -1250,4 +1252,30 @@ button:focus-visible {
   .mobile-menu > nav,
   .recruiter-mobile-menu > nav { transition-duration: .01ms !important; animation: none; }
   .recruiter-project-card:hover { transform: none; }
+}
+
+
+/* Keep the sticky navigation independent from the view-transition transform. */
+.view-stage { animation: viewStageFade .38s ease both; }
+@keyframes viewStageFade {
+  from { opacity: .72; }
+  to { opacity: 1; }
+}
+#recruiter-about,
+#recruiter-skills,
+#recruiter-projects,
+#recruiter-personal-projects,
+#recruiter-education,
+#about,
+#skills,
+#designs,
+#personal-projects,
+#selected-works,
+#education,
+#contact {
+  scroll-margin-top: 100px;
+}
+@media (max-width: 900px) {
+  .mobile-menu-actions { flex-direction: row; align-items: center; }
+  .mobile-menu-actions .header-cta { display: inline-flex; }
 }
