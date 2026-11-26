@@ -727,9 +727,7 @@ function PortfolioView({ view, onChangeView }: { view: ViewMode; onChangeView: (
 						<h3>J Clothes</h3>
 					</div>
 					<p>
-						A PHP-powered clothing storefront focused on considered everyday wear,
-						complete with product browsing, shopping bag interactions, account access,
-						and a responsive editorial shopping experience.
+						I built J Clothes as a PHP-powered online store. It includes product browsing, a shopping bag, customer accounts, and a responsive layout.
 						<a className="case-study-link live-website-link" href="https://j-clothes-php-shop.vercel.app" target="_blank" rel="noreferrer"><strong>Live Website ↗</strong></a>
 					</p>
 				</div>
