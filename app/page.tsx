@@ -1,3 +1,7 @@
+"use client";
+
+import { useState } from "react";
+
 const skillGroups = [
 	{
 		number: "01",
@@ -48,6 +52,8 @@ const navItems = [
 	{ label: "Contact", href: "#contact" },
 ];
 
+type ViewMode = "recruiter" | "portfolio";
+
 function ArrowUpRight() {
 	return (
 		<svg aria-hidden="true" viewBox="0 0 20 20" className="arrow-icon">
@@ -59,14 +65,249 @@ function ArrowUpRight() {
 function DownloadIcon() {
 	return (
 		<svg aria-hidden="true" viewBox="0 0 20 20" className="button-icon">
-			<path d="M10 2.75v9.5m-3.5-3.5 3.5 3.5 3.5-3.5M4 14.25v2.5h12v-2.5" />
+			<path d="M10 2.5v9m-3.25-3.25L10 11.5l3.25-3.25M4 13.5v3h12v-3" />
+		</svg>
+	);
+}
+
+function RecruiterViewIcon() {
+	return (
+		<svg aria-hidden="true" viewBox="0 0 20 20" className="view-mode-icon">
+			<circle cx="10" cy="6.2" r="3.1" />
+			<path d="M3.8 17c.45-3.2 2.7-5 6.2-5s5.75 1.8 6.2 5" />
+		</svg>
+	);
+}
+
+function PortfolioViewIcon() {
+	return (
+		<svg aria-hidden="true" viewBox="0 0 20 20" className="view-mode-icon">
+			<rect x="2.8" y="2.8" width="6" height="6" rx="1" />
+			<rect x="11.2" y="2.8" width="6" height="6" rx="1" />
+			<rect x="2.8" y="11.2" width="6" height="6" rx="1" />
+			<rect x="11.2" y="11.2" width="6" height="6" rx="1" />
 		</svg>
 	);
 }
 
 export default function Home() {
+	const [view, setView] = useState<ViewMode>("portfolio");
+
 	return (
-		<main>
+		<main className="site-shell">
+			<div className="view-mode-bar">
+				<div className="view-mode-intro">
+					<span className="view-mode-overline">EXPLORE THIS SITE</span>
+					<span className="view-mode-caption">Choose the experience that suits you.</span>
+				</div>
+				<div className="view-mode-switch" role="group" aria-label="Choose a portfolio view">
+					<button
+						type="button"
+						className={`view-mode-button ${view === "recruiter" ? "is-active" : ""}`}
+						aria-pressed={view === "recruiter"}
+						onClick={() => setView("recruiter")}
+					>
+						<RecruiterViewIcon />
+						Recruiter View
+					</button>
+					<button
+						type="button"
+						className={`view-mode-button ${view === "portfolio" ? "is-active" : ""}`}
+						aria-pressed={view === "portfolio"}
+						onClick={() => setView("portfolio")}
+					>
+						<PortfolioViewIcon />
+						Portfolio View
+					</button>
+				</div>
+			</div>
+
+			<div key={view} className={`view-stage view-stage-${view}`}>
+				{view === "recruiter" ? (
+					<RecruiterView onShowPortfolio={() => setView("portfolio")} />
+				) : (
+					<PortfolioView />
+				)}
+			</div>
+		</main>
+	);
+}
+
+function RecruiterView({ onShowPortfolio }: { onShowPortfolio: () => void }) {
+	return (
+		<div className="recruiter-view">
+			<header className="recruiter-header">
+				<a className="brand" href="#recruiter-home" aria-label="Jhoverne Morcilla home">
+					<span className="brand-mark">JM</span>
+					<span className="brand-name">Jhoverne Morcilla</span>
+				</a>
+				<span className="recruiter-header-note">RECRUITER SNAPSHOT / 2026</span>
+				<a className="button button-dark recruiter-header-contact" href="mailto:vhaniemorcilla4785@gmail.com">
+					Email me <ArrowUpRight />
+				</a>
+			</header>
+
+			<section className="recruiter-hero" id="recruiter-home">
+				<div className="recruiter-hero-grid" aria-hidden="true" />
+				<div className="recruiter-hero-content">
+					<div className="availability">
+						<span className="status-dot" /> OPEN TO OJT OPPORTUNITIES
+					</div>
+					<p className="hero-kicker">BS INFORMATION TECHNOLOGY STUDENT</p>
+					<h1>Jhoverne <span>Morcilla.</span></h1>
+					<p className="recruiter-lead">
+						An aspiring IT professional seeking an On-the-Job Training opportunity
+						to apply classroom learning, strengthen practical skills, and contribute
+						to a collaborative team.
+					</p>
+					<div className="recruiter-hero-actions">
+						<a className="button button-primary" href="/resume.pdf" target="_blank" rel="noreferrer">
+							View resume <ArrowUpRight />
+						</a>
+						<a
+							className="button button-secondary"
+							href="/resume.pdf"
+							download="Jhoverne-Morcilla-Resume.pdf"
+							aria-label="Download resume PDF"
+						>
+							<DownloadIcon /> Download resume
+						</a>
+						<button type="button" className="button button-secondary" onClick={onShowPortfolio}>
+							<PortfolioViewIcon /> View full portfolio
+						</button>
+					</div>
+					<div className="recruiter-hero-meta">
+						<span><strong>LOCATION</strong> Cavite, Philippines</span>
+						<span><strong>EDUCATION</strong> BS Information Technology</span>
+					</div>
+				</div>
+				<div className="recruiter-profile-frame">
+					<div className="recruiter-profile-label"><span>PERSONAL PROFILE</span><span>JM / 2026</span></div>
+					<img src="/profile.jpg?v=20261124" alt="Jhoverne Morcilla" width="420" height="480" />
+					<div className="recruiter-profile-footer">LEARN <span>•</span> BUILD <span>•</span> GROW</div>
+				</div>
+			</section>
+
+			<section className="recruiter-body section-wrap" aria-label="Recruiter information">
+				<div className="recruiter-section-heading">
+					<span className="section-index">01 / PROFESSIONAL SUMMARY</span>
+					<span className="section-rule" />
+				</div>
+				<div className="recruiter-summary-grid">
+					<div className="recruiter-summary-copy">
+						<h2>Motivated to learn.<br /><em>Ready to contribute.</em></h2>
+						<p>
+							I am a Bachelor of Science in Information Technology student at
+							the National College of Science and Technology. I am eager to apply
+							what I have learned in programming, computer systems, and web
+							development while gaining real-world industry experience.
+						</p>
+						<p>
+							I value collaboration, take responsibility for my work, and approach
+							new challenges with adaptability and a willingness to keep learning.
+						</p>
+					</div>
+					<aside className="recruiter-quick-facts">
+						<span>QUICK DETAILS</span>
+						<div><small>PROGRAM</small><strong>BS Information Technology</strong></div>
+						<div><small>SCHOOL</small><strong>National College of Science and Technology</strong></div>
+						<div><small>STUDY PERIOD</small><strong>September 2023 – 2027</strong></div>
+						<div><small>LOCATION</small><strong>Cavite, Philippines</strong></div>
+					</aside>
+				</div>
+
+				<div className="recruiter-section-heading recruiter-heading-spaced">
+					<span className="section-index">02 / TECHNICAL SKILLS</span>
+					<span className="section-rule" />
+				</div>
+				<div className="recruiter-skill-grid">
+					{skillGroups.map((group) => (
+						<article className="recruiter-skill-card" key={group.number}>
+							<span className="recruiter-card-number">{group.number}</span>
+							<h3>{group.title}</h3>
+							<p>{group.description}</p>
+							<div className="tag-list">
+								{group.tags.map((tag) => <span className="tag" key={tag}>{tag}</span>)}
+							</div>
+						</article>
+					))}
+				</div>
+				<div className="recruiter-strengths">
+					<strong>PERSONAL STRENGTHS</strong>
+					<div>{strengths.map((strength) => <span key={strength}>{strength}</span>)}</div>
+				</div>
+
+				<div className="recruiter-section-heading recruiter-heading-spaced">
+					<span className="section-index">03 / SELECTED PROJECTS</span>
+					<span className="section-rule" />
+				</div>
+				<div className="recruiter-project-grid">
+					<article className="recruiter-project-card recruiter-project-featured">
+						<span className="recruiter-project-label">THESIS PLATFORM / 2026</span>
+						<h3>CAVITE MotoTech</h3>
+						<p>A motorcycle parts and repair platform connecting Cavite riders with verified shops, searchable parts, workshop services, and bookings.</p>
+						<a href="https://cavitemototech.ogm1.com/#/" target="_blank" rel="noreferrer">Open live platform <ArrowUpRight /></a>
+					</article>
+					<article className="recruiter-project-card">
+						<span className="recruiter-project-label">FULL-STACK PROJECT / 04</span>
+						<h3>J Clothes</h3>
+						<p>A PHP-powered clothing storefront with product browsing, shopping bag interactions, account access, and a responsive shopping experience.</p>
+						<a href="https://j-clothes-php-shop.vercel.app" target="_blank" rel="noreferrer">Open live website <ArrowUpRight /></a>
+					</article>
+					<article className="recruiter-project-card">
+						<span className="recruiter-project-label">UI DESIGN CONCEPTS</span>
+						<h3>Petal &amp; Stem, Jhocoffee, and Verne&apos; Tastes</h3>
+						<p>Interface explorations for a flower shop, café storefront, and artisan bakery, focused on layout, visual hierarchy, and shopping flows.</p>
+						<span className="recruiter-project-note">Design drafts are featured in Portfolio View.</span>
+					</article>
+				</div>
+
+				<div className="recruiter-section-heading recruiter-heading-spaced">
+					<span className="section-index">04 / EDUCATION &amp; CERTIFICATE</span>
+					<span className="section-rule" />
+				</div>
+				<div className="recruiter-education-grid">
+					<article className="recruiter-education-card">
+						<span>COLLEGE / PHILIPPINES</span>
+						<div className="recruiter-ncst-mark">NCST</div>
+						<h3>National College of Science and Technology</h3>
+						<p>Bachelor of Science in Information Technology</p>
+						<strong>September 2023 – 2027</strong>
+					</article>
+					<article className="recruiter-certificate-card">
+						<img src="/javascript%20cert.png" alt="Introduction to JavaScript course certificate" />
+						<div><span>SOLOLEARN / 20 JUNE 2024</span><h3>Introduction to JavaScript</h3></div>
+					</article>
+				</div>
+			</section>
+
+			<section className="recruiter-contact">
+				<div className="recruiter-contact-inner">
+					<div>
+						<span className="recruiter-project-label">READY FOR THE NEXT LEARNING OPPORTUNITY</span>
+						<h2>Let&apos;s connect.</h2>
+						<p>I would be glad to discuss an OJT opportunity and how I can contribute to your team.</p>
+					</div>
+					<div className="recruiter-contact-actions">
+						<a className="button button-primary" href="mailto:vhaniemorcilla4785@gmail.com">Email Jhoverne <ArrowUpRight /></a>
+						<a className="recruiter-contact-detail" href="tel:+639197750461">+63 919 775 0461</a>
+						<span className="recruiter-contact-detail">Cavite, Philippines</span>
+					</div>
+				</div>
+			</section>
+
+			<footer className="site-footer recruiter-footer">
+				<a className="footer-brand" href="#recruiter-home">JM<span>.</span></a>
+				<span>© {new Date().getFullYear()} Jhoverne Morcilla</span>
+				<button type="button" className="recruiter-footer-switch" onClick={onShowPortfolio}>SWITCH TO PORTFOLIO VIEW ↗</button>
+			</footer>
+		</div>
+	);
+}
+
+function PortfolioView() {
+	return (
+		<div className="portfolio-view">
 			<header className="site-header">
 				<a className="brand" href="#home" aria-label="Jhoverne Morcilla home">
 					<span className="brand-mark">JM</span>
@@ -124,14 +365,14 @@ export default function Home() {
 							Get in touch <ArrowUpRight />
 						</a>
 							<a className="button button-secondary" href="/resume.pdf" target="_blank" rel="noreferrer">
-								View résumé <ArrowUpRight />
+								View resume <ArrowUpRight />
 							</a>
 							<a
 								className="button button-secondary"
 								href="/resume.pdf"
 								download="Jhoverne-Morcilla-Resume.pdf"
 							>
-								<DownloadIcon /> Download résumé
+								<DownloadIcon /> Download resume
 							</a>
 					</div>
 					<div className="hero-meta">
@@ -208,7 +449,7 @@ export default function Home() {
 								target="_blank"
 								rel="noreferrer"
 							>
-							View my résumé <ArrowUpRight />
+							View resume <ArrowUpRight />
 						</a>
 					</div>
 				</div>
@@ -581,7 +822,7 @@ export default function Home() {
 				</div>
 				<div className="contact-layout">
 					<div>
-						<p className="eyebrow">HAVE AN OJTPPORTUNITY?</p>
+						<p className="eyebrow">OPEN TO OJT OPPORTUNITIES</p>
 						<h2>Let&apos;s make<br /><em>something matter.</em></h2>
 						<p className="contact-intro">I&apos;d be glad to connect and discuss how I can learn, contribute, and grow with your team.</p>
 						<a className="button button-dark" href="mailto:vhaniemorcilla4785@gmail.com">Send me an email <ArrowUpRight /></a>
@@ -600,6 +841,6 @@ export default function Home() {
 				<span>© {new Date().getFullYear()} Jhoverne Morcilla</span>
 				<a href="#home" className="back-to-top">BACK TO TOP ↑</a>
 			</footer>
-		</main>
+		</div>
 	);
 }
