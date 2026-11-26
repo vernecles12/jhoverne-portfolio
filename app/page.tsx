@@ -56,6 +56,14 @@ function ArrowUpRight() {
 	);
 }
 
+function DownloadIcon() {
+	return (
+		<svg aria-hidden="true" viewBox="0 0 20 20" className="button-icon">
+			<path d="M10 2.75v9.5m-3.5-3.5 3.5 3.5 3.5-3.5M4 14.25v2.5h12v-2.5" />
+		</svg>
+	);
+}
+
 export default function Home() {
 	return (
 		<main>
@@ -118,6 +126,13 @@ export default function Home() {
 							<a className="button button-secondary" href="/resume.pdf" target="_blank" rel="noreferrer">
 								View résumé <ArrowUpRight />
 							</a>
+							<a
+								className="button button-secondary"
+								href="/resume.pdf"
+								download="Jhoverne-Morcilla-Resume.pdf"
+							>
+								<DownloadIcon /> Download résumé
+							</a>
 					</div>
 					<div className="hero-meta">
 						<span>
@@ -167,7 +182,7 @@ export default function Home() {
 
 			<section className="intro section-wrap" id="about">
 				<div className="section-heading">
-					<span className="section-index">ABOUT ME</span>
+						<span className="section-index">01 / ABOUT ME</span>
 					<span className="section-rule" />
 				</div>
 				<div className="intro-layout">
@@ -189,7 +204,9 @@ export default function Home() {
 						</p>
 							<a
 								className="text-link"
-								href="/resume.pdf" target="_blank" rel="noreferrer"
+								href="/resume.pdf"
+								target="_blank"
+								rel="noreferrer"
 							>
 							View my résumé <ArrowUpRight />
 						</a>
@@ -200,7 +217,7 @@ export default function Home() {
 			<section className="skills-section" id="skills">
 				<div className="section-wrap">
 					<div className="section-heading section-heading-light">
-						<span className="section-index">TECHNICAL SKILLS</span>
+							<span className="section-index">02 / TECHNICAL SKILLS</span>
 						<span className="section-rule" />
 					</div>
 					<div className="skills-title-row">
@@ -246,7 +263,7 @@ export default function Home() {
 
 			<section className="designs-section section-wrap" id="designs">
 				<div className="section-heading">
-					<span className="section-index">UI DESIGN DRAFTS</span>
+						<span className="section-index">03 / UI DESIGN DRAFTS</span>
 					<span className="section-rule" />
 				</div>
 				<div className="designs-heading">
@@ -442,7 +459,7 @@ export default function Home() {
 
 			<section className="selected-works-section section-wrap" id="selected-works">
 				<div className="section-heading">
-					<span className="section-index">SELECTED WORKS</span>
+						<span className="section-index">05 / SELECTED WORKS</span>
 					<span className="section-rule" />
 				</div>
 
@@ -512,7 +529,7 @@ export default function Home() {
 
 			<section className="education-section section-wrap" id="education">
 				<div className="section-heading">
-					<span className="section-index">EDUCATION</span>
+						<span className="section-index">06 / EDUCATION</span>
 					<span className="section-rule" />
 				</div>
 				<div className="education-layout">
@@ -525,7 +542,7 @@ export default function Home() {
 						<div className="education-monogram">NCST</div>
 						<h3>National College of Science and Technology</h3>
 						<p>Bachelor of Science in Information Technology</p>
-							<p className="education-dates">Sept 2023 - 2027</p>
+						<p className="education-dates">Sept 2023 - 2027</p>
 						<div className="education-location"><span className="location-dot" /> Cavite, Philippines</div>
 					</article>
 				</div>
@@ -551,7 +568,7 @@ export default function Home() {
 
 			<section className="objective-section">
 				<div className="objective-inner">
-					<span className="section-index">MY OBJECTIVE</span>
+						<span className="section-index">07 / MY OBJECTIVE</span>
 					<p className="objective-quote">“I aim to contribute my knowledge, dedication, and willingness to learn while preparing myself for future career opportunities.”</p>
 					<span className="objective-note">READY FOR THE NEXT LEARNING OPPORTUNITY</span>
 				</div>
@@ -559,7 +576,7 @@ export default function Home() {
 
 			<section className="contact-section section-wrap" id="contact">
 				<div className="section-heading">
-					<span className="section-index">CONTACT</span>
+						<span className="section-index">08 / CONTACT</span>
 					<span className="section-rule" />
 				</div>
 				<div className="contact-layout">
