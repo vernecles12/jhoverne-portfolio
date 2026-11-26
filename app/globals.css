@@ -1291,3 +1291,190 @@ button:focus-visible {
     min-width: 0;
   }
 }
+
+
+/* More compact vertical rhythm across portfolio and recruiter sections. */
+.intro { padding-top: 82px; padding-bottom: 88px; }
+.skills-section { padding: 78px 0 72px; }
+.education-section { padding-top: 82px; padding-bottom: 88px; }
+.contact-section { padding-top: 82px; padding-bottom: 84px; }
+.designs-section { padding-top: 78px; padding-bottom: 70px; }
+.selected-works-section { padding-top: 78px; padding-bottom: 82px; }
+.personal-projects-section { padding-top: 72px; padding-bottom: 28px; }
+.designs-heading { margin-bottom: 34px; }
+.design-caption { margin: 18px 0 34px; padding-top: 18px; gap: 30px; }
+.recruiter-body { padding-top: 66px; padding-bottom: 78px; }
+.recruiter-heading-spaced { margin-top: 56px; }
+.recruiter-section-heading { margin-bottom: 30px; }
+.recruiter-summary-copy h2 { margin-bottom: 18px; }
+.recruiter-summary-copy p { margin: 0 0 12px; }
+.recruiter-skill-grid { gap: 12px; }
+.recruiter-skill-card { min-height: 170px; padding: 20px; }
+.recruiter-project-grid { gap: 16px; }
+.recruiter-project-card { min-height: 0; padding: 0; overflow: hidden; }
+.recruiter-thesis-grid .recruiter-project-card { min-height: 0; }
+.recruiter-personal-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.recruiter-project-image {
+  display: block;
+  width: 100%;
+  height: 190px;
+  object-fit: contain;
+  object-position: center;
+  padding: 10px;
+  background: #e9ede4;
+  border-bottom: 1px solid rgba(16, 27, 24, .10);
+}
+.recruiter-project-copy {
+  min-height: 225px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px 22px 22px;
+}
+.recruiter-project-card h3 { margin: 12px 0 8px; }
+.recruiter-project-card p { margin: 0; font-size: 12px; line-height: 1.7; }
+.recruiter-project-featured p { color: #dce6dc; }
+.recruiter-project-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 38px;
+  width: fit-content;
+  margin-top: auto;
+  padding: 0 14px;
+  border: 1px solid #91a864;
+  border-radius: 999px;
+  background: rgba(215, 251, 104, .10);
+  color: #344b29;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .15px;
+  text-decoration: none;
+  animation: projectBorderFade 3.6s ease-in-out infinite;
+  transition: background-color .28s ease, color .28s ease, border-color .28s ease, box-shadow .28s ease, transform .2s ease;
+}
+.recruiter-project-featured .recruiter-project-action {
+  color: #f6ffd9;
+  border-color: #9eb85a;
+  background: rgba(215, 251, 104, .08);
+}
+.recruiter-project-action .arrow-icon { width: 14px; height: 14px; }
+.recruiter-project-action:hover {
+  background: #d7fb68;
+  color: #101b18;
+  border-color: #efffb9;
+  box-shadow: 0 5px 16px rgba(215, 251, 104, .16);
+  transform: translateY(-2px);
+  animation: none;
+}
+.recruiter-project-featured .recruiter-project-action:hover {
+  background: #d7fb68;
+  color: #101b18;
+}
+.recruiter-project-action:active { transform: scale(.98); }
+@keyframes projectBorderFade {
+  0%, 100% { border-color: #91a864; box-shadow: 0 0 0 rgba(215, 251, 104, 0); }
+  50% { border-color: #d7fb68; box-shadow: 0 0 0 3px rgba(215, 251, 104, .11); }
+}
+
+/* Recruiter skill tags need dark text on light cards to remain easy to read. */
+.recruiter-skill-card .tag-list { gap: 8px; margin-top: 13px; }
+.recruiter-skill-card .tag {
+  padding: 7px 9px;
+  border: 1px solid #aab88d;
+  border-radius: 5px;
+  background: #e8eddf;
+  color: #263a2e;
+  font: 600 10px/1.2 var(--mono);
+}
+
+/* Project summaries and their buttons read as a clear unit before each gallery. */
+.design-caption { align-items: start; }
+.design-caption > div { grid-template-columns: 190px 1fr; }
+.design-project-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-self: end;
+  width: 100%;
+  max-width: 540px;
+}
+.design-project-copy p {
+  width: 100%;
+  max-width: 540px;
+  justify-self: start;
+  margin: 0;
+  padding: 0;
+  color: #65716a;
+  font-size: 12px;
+  line-height: 1.75;
+}
+.case-study-link.project-action-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: fit-content;
+  min-height: 39px;
+  margin-top: 18px;
+  padding: 0 15px;
+  border: 1px solid #91a864;
+  border-radius: 999px;
+  background: rgba(215, 251, 104, .12);
+  color: #344b29;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  animation: projectBorderFade 3.6s ease-in-out infinite;
+  transition: background-color .28s ease, border-color .28s ease, color .28s ease, box-shadow .28s ease, transform .2s ease;
+}
+.case-study-link.project-action-button strong {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: inherit;
+}
+.case-study-link.project-action-button .arrow-icon { width: 14px; height: 14px; }
+.case-study-link.project-action-button:hover {
+  background: #14251f;
+  border-color: #d7fb68;
+  color: #fbfcf8;
+  box-shadow: 0 6px 18px rgba(16, 27, 24, .14);
+  transform: translateY(-2px);
+  animation: none;
+}
+.case-study-link.project-action-button:active { transform: scale(.98); }
+.designs-section .design-caption { margin-bottom: 24px; }
+.personal-projects-section .design-caption { margin-bottom: 22px; }
+.personal-projects-section .jclothes-board { margin-top: 0; }
+.case-study-link { text-decoration: none; }
+
+@media (max-width: 760px) {
+  .intro { padding-top: 66px; padding-bottom: 72px; }
+  .skills-section { padding: 66px 0 62px; }
+  .education-section { padding-top: 66px; padding-bottom: 70px; }
+  .contact-section { padding-top: 66px; padding-bottom: 68px; }
+  .designs-section { padding-top: 64px; padding-bottom: 52px; }
+  .selected-works-section { padding-top: 64px; padding-bottom: 66px; }
+  .personal-projects-section { padding-top: 58px; }
+  .designs-heading { margin-bottom: 26px; }
+  .design-caption { margin-bottom: 20px; }
+  .recruiter-body { padding-top: 54px; padding-bottom: 62px; }
+  .recruiter-heading-spaced { margin-top: 44px; }
+  .recruiter-section-heading { margin-bottom: 24px; }
+  .recruiter-project-image { height: 180px; }
+  .recruiter-project-copy { min-height: 0; padding: 18px; }
+  .recruiter-project-action { margin-top: 20px; }
+  .recruiter-personal-grid { grid-template-columns: 1fr; }
+  .design-caption > div { grid-template-columns: 1fr; gap: 7px; }
+  .design-project-copy { max-width: 100%; }
+  .case-study-link.project-action-button { margin-top: 14px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .recruiter-project-action,
+  .case-study-link.project-action-button { animation: none; transition-duration: .01ms !important; }
+  .recruiter-project-action:hover,
+  .case-study-link.project-action-button:hover { transform: none; }
+}
