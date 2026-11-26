@@ -244,7 +244,7 @@ function RecruiterView({ view, onChangeView, onShowPortfolio }: { view: ViewMode
 				</div>
 				<div className="recruiter-project-grid recruiter-personal-grid">
 					<article className="recruiter-project-card">
-						<img className="recruiter-project-image" src="/j-clothes/J%20Clothes%201%20-%20Home.png" alt="J Clothes online store landing page" width="1360" height="760" loading="lazy" />
+						<img className="recruiter-project-image" src="/recruiter-images/j-clothes-landing.png" alt="J Clothes landing page" width="1352" height="686" loading="lazy" />
 						<div className="recruiter-project-copy">
 							<span className="recruiter-project-label">PERSONAL PROJECT / FULL-STACK</span>
 							<h3>J Clothes</h3>
@@ -262,7 +262,7 @@ function RecruiterView({ view, onChangeView, onShowPortfolio }: { view: ViewMode
 						</div>
 					</article>
 					<article className="recruiter-project-card">
-						<img className="recruiter-project-image" src="/jhocoffee-landing.png" alt="Jhocoffee landing page hero" width="1216" height="720" loading="lazy" />
+						<img className="recruiter-project-image" src="/recruiter-images/jhocoffee-landing-enhanced.png" alt="Jhocoffee landing page" width="578" height="366" loading="lazy" />
 						<div className="recruiter-project-copy">
 							<span className="recruiter-project-label">PERSONAL UI DESIGN / 02</span>
 							<h3>Jhocoffee</h3>
@@ -271,7 +271,7 @@ function RecruiterView({ view, onChangeView, onShowPortfolio }: { view: ViewMode
 						</div>
 					</article>
 					<article className="recruiter-project-card">
-						<img className="recruiter-project-image" src="/Verne%27%20Tastes%20(1).png" alt="Verne Tastes bakery landing page" width="1360" height="720" loading="lazy" />
+						<img className="recruiter-project-image" src="/Verne%27%20Tastes%20(1).png" alt="Verne Tastes bakery landing page" width="468" height="375" loading="lazy" />
 						<div className="recruiter-project-copy">
 							<span className="recruiter-project-label">PERSONAL UI DESIGN / 03</span>
 							<h3>Verne&apos; Tastes</h3>
