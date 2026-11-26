@@ -122,14 +122,6 @@ function ArrowUpRight() {
 	);
 }
 
-function DownloadIcon() {
-	return (
-		<svg aria-hidden="true" viewBox="0 0 20 20" className="button-icon">
-			<path d="M10 2.5v9m-3.25-3.25L10 11.5l3.25-3.25M4 13.5v3h12v-3" />
-		</svg>
-	);
-}
-
 function RecruiterViewIcon() {
 	return (
 		<svg aria-hidden="true" viewBox="0 0 20 20" className="view-mode-icon">
@@ -445,7 +437,6 @@ function RecruiterView({ view, onChangeView, onShowPortfolio, theme, onToggleThe
 					<div>
 						<span className="recruiter-project-label">READY FOR THE NEXT LEARNING OPPORTUNITY</span>
 						<h2>Let&apos;s connect.</h2>
-						<p>I would be glad to discuss an OJT opportunity and how I can contribute to your team.</p>
 					</div>
 					<div className="recruiter-contact-actions">
 						<a className="button button-primary" href="mailto:vhaniemorcilla4785@gmail.com">Email Jhoverne <ArrowUpRight /></a>
@@ -532,13 +523,6 @@ function PortfolioView({ view, onChangeView, theme, onToggleTheme }: { view: Vie
 						</a>
 							<a className="button button-secondary" href="/resume.pdf" target="_blank" rel="noreferrer">
 								View resume <ArrowUpRight />
-							</a>
-							<a
-								className="button button-secondary"
-								href="/resume.pdf"
-								download="Jhoverne-Morcilla-Resume.pdf"
-							>
-								<DownloadIcon /> Download resume
 							</a>
 					</div>
 					<div className="hero-meta">
@@ -1001,7 +985,6 @@ function PortfolioView({ view, onChangeView, theme, onToggleTheme }: { view: Vie
 					<div>
 						<p className="eyebrow">OPEN TO OJT OPPORTUNITIES</p>
 						<h2>Let&apos;s make<br /><em>something matter.</em></h2>
-						<p className="contact-intro">I&apos;d be glad to connect and discuss how I can learn, contribute, and grow with your team.</p>
 						<a className="button button-dark" href="mailto:vhaniemorcilla4785@gmail.com">Send me an email <ArrowUpRight /></a>
 					</div>
 					<div className="contact-details">
@@ -1009,7 +992,6 @@ function PortfolioView({ view, onChangeView, theme, onToggleTheme }: { view: Vie
 						<a href="tel:+639197750461" className="contact-item"><span className="contact-label">PHONE</span><span>+63 919 775 0461</span><ArrowUpRight /></a>
 						<div className="contact-item contact-static"><span className="contact-label">LOCATION</span><span>Cavite, Philippines</span><span className="location-pin">⌖</span></div>
 						<SocialLinks variant="portfolio" />
-						<div className="reference-note">PROFESSIONAL REFERENCES<br /><strong>Available this soon.</strong></div>
 					</div>
 				</div>
 			</section>
