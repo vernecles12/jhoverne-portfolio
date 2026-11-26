@@ -261,12 +261,15 @@ function RecruiterView({ view, onChangeView, onShowPortfolio }: { view: ViewMode
 					<span className="section-rule" />
 				</div>
 				<div className="recruiter-project-grid recruiter-thesis-grid">
-	<article className="recruiter-project-card recruiter-project-featured">
+					<article className="recruiter-project-card recruiter-project-featured">
+						<img className="recruiter-project-image" src="/MOTO%20CVT.png" alt="CAVITE MotoTech thesis platform landing page" width="1360" height="680" loading="lazy" />
+						<div className="recruiter-project-copy">
 							<span className="recruiter-project-label">THESIS PLATFORM / 2026</span>
 							<h3>CAVITE MotoTech</h3>
-							<p>A motorcycle parts and repair platform connecting Cavite riders with verified shops, searchable parts, workshop services, and bookings.</p>
-							<a href="https://cavitemototech.ogm1.com/#/" target="_blank" rel="noreferrer">Open live platform <ArrowUpRight /></a>
-						</article>
+							<p>A motorcycle parts and repair platform that helps Cavite riders find parts, compare services, and connect with local workshops.</p>
+							<a className="recruiter-project-action" href="https://cavitemototech.ogm1.com/#/" target="_blank" rel="noreferrer">Live Website <ArrowUpRight /></a>
+						</div>
+					</article>
 				</div>
 
 				<div className="recruiter-section-heading recruiter-heading-spaced" id="recruiter-personal-projects">
@@ -274,18 +277,42 @@ function RecruiterView({ view, onChangeView, onShowPortfolio }: { view: ViewMode
 					<span className="section-rule" />
 				</div>
 				<div className="recruiter-project-grid recruiter-personal-grid">
-	<article className="recruiter-project-card">
+					<article className="recruiter-project-card">
+						<img className="recruiter-project-image" src="/j-clothes/J%20Clothes%201%20-%20Home.png" alt="J Clothes online store landing page" width="1360" height="760" loading="lazy" />
+						<div className="recruiter-project-copy">
 							<span className="recruiter-project-label">PERSONAL PROJECT / FULL-STACK</span>
 							<h3>J Clothes</h3>
-							<p>An online clothing shop I built with PHP, with product browsing, a shopping bag, and customer account features.</p>
-							<a href="https://j-clothes-php-shop.vercel.app" target="_blank" rel="noreferrer">Open live website <ArrowUpRight /></a>
-						</article>
-						<article className="recruiter-project-card">
-							<span className="recruiter-project-label">UI DESIGN CONCEPTS</span>
-							<h3>Petal &amp; Stem, Jhocoffee, and Verne&apos; Tastes</h3>
-							<p>A collection of interface concepts for a flower shop, café, and bakery, exploring clear layouts and simple shopping experiences.</p>
-							<span className="recruiter-project-note">Design drafts are featured in Portfolio View.</span>
-						</article>
+							<p>I built J Clothes as a PHP-powered online store with product browsing, a shopping bag, customer accounts, and a responsive layout.</p>
+							<a className="recruiter-project-action" href="https://j-clothes-php-shop.vercel.app" target="_blank" rel="noreferrer">Live Website <ArrowUpRight /></a>
+						</div>
+					</article>
+					<article className="recruiter-project-card">
+						<img className="recruiter-project-image" src="/Flower%20shop%20(2).png" alt="Petal and Stem flower shop landing page" width="1363" height="682" loading="lazy" />
+						<div className="recruiter-project-copy">
+							<span className="recruiter-project-label">PERSONAL UI DESIGN / 01</span>
+							<h3>Petal &amp; Stem</h3>
+							<p>A flower-shop concept with an editorial home page, product collection, and a warm visual style.</p>
+							<a className="recruiter-project-action" href="https://www.figma.com/make/HolPTmatYgxMceCxkBvQMi/Bloom-and-Co-Flower-Shop?t=IicLF2tbegGEWGA7-1" target="_blank" rel="noreferrer">Explore it <ArrowUpRight /></a>
+						</div>
+					</article>
+					<article className="recruiter-project-card">
+						<img className="recruiter-project-image" src="/JhoCoffee%20(6).png" alt="Jhocoffee cafe storefront landing page" width="304" height="670" loading="lazy" />
+						<div className="recruiter-project-copy">
+							<span className="recruiter-project-label">PERSONAL UI DESIGN / 02</span>
+							<h3>Jhocoffee</h3>
+							<p>A café storefront concept with featured drinks, a menu preview, and a calm, welcoming layout.</p>
+							<a className="recruiter-project-action" href="https://www.figma.com/design/pDnDO36JdqRY8Fb2P3yCdM/Untitled?t=IicLF2tbegGEWGA7-1" target="_blank" rel="noreferrer">Explore it <ArrowUpRight /></a>
+						</div>
+					</article>
+					<article className="recruiter-project-card">
+						<img className="recruiter-project-image" src="/Verne%27%20Tastes%20(1).png" alt="Verne Tastes bakery landing page" width="1360" height="720" loading="lazy" />
+						<div className="recruiter-project-copy">
+							<span className="recruiter-project-label">PERSONAL UI DESIGN / 03</span>
+							<h3>Verne&apos; Tastes</h3>
+							<p>A bakery concept with a curated cake collection, a warm brand identity, and a simple shopping flow.</p>
+							<a className="recruiter-project-action" href="https://www.figma.com/design/NloAW4LVuFRC5HWgb0xNik/Untitled?node-id=0-1&amp;t=Jh0QiKCQ4IHSoEsE-1" target="_blank" rel="noreferrer">Explore it <ArrowUpRight /></a>
+						</div>
+					</article>
 				</div>
 
 				<div className="recruiter-section-heading recruiter-heading-spaced" id="recruiter-education">
@@ -552,7 +579,16 @@ function PortfolioView({ view, onChangeView }: { view: ViewMode; onChangeView: (
 					</p>
 				</div>
 
-				<div
+				<div className="design-caption">
+					<div>
+						<span>PERSONAL UI DESIGN / 01</span>
+						<h3>Petal &amp; Stem</h3>
+					</div>
+					<div className="design-project-copy">
+						<p>A warm flower-shop concept with an editorial home page, curated product collection, and a welcoming brand style.</p>
+						<a className="case-study-link project-action-button" href="https://www.figma.com/make/HolPTmatYgxMceCxkBvQMi/Bloom-and-Co-Flower-Shop?t=IicLF2tbegGEWGA7-1" target="_blank" rel="noreferrer"><strong>Explore it <ArrowUpRight /></strong></a>
+					</div>
+				</div>				<div
 					className="design-board screenshot-board petal-board"
 					aria-label="Petal and Stem public UI screenshots"
 				>
@@ -565,19 +601,18 @@ function PortfolioView({ view, onChangeView }: { view: ViewMode; onChangeView: (
 						<img className="screenshot screenshot-detail extra-3" src="/Flower%20shop%20(6).png" alt="Flower shop 6 - Petal and Stem checkout" />
 					</div>
 				</div>
-				<div className="design-caption">
-					<div>
-						<span>PERSONAL UI DESIGN / 01</span>
-						<h3>Petal &amp; Stem</h3>
-					</div>
-					<p>
-						A warm editorial flower-shop concept featuring an expressive hero,
-						product collection, brand promise, and layered account interface.
-						<a className="case-study-link" href="https://www.figma.com/make/HolPTmatYgxMceCxkBvQMi/Bloom-and-Co-Flower-Shop?t=IicLF2tbegGEWGA7-1" target="_blank" rel="noreferrer"><strong>Explore it ↗</strong></a>
-					</p>
-				</div>
 
-				<div
+
+				<div className="design-caption jhocoffee-caption">
+					<div>
+						<span>PERSONAL UI DESIGN / 02</span>
+						<h3>Jhocoffee</h3>
+					</div>
+					<div className="design-project-copy">
+						<p>A café storefront concept with featured drinks, a full menu preview, and a calm, welcoming layout.</p>
+						<a className="case-study-link project-action-button" href="https://www.figma.com/design/pDnDO36JdqRY8Fb2P3yCdM/Untitled?t=IicLF2tbegGEWGA7-1" target="_blank" rel="noreferrer"><strong>Explore it <ArrowUpRight /></strong></a>
+					</div>
+				</div>				<div
 					className="design-board jhocoffee-board"
 					aria-label="Layered Jhocoffee café UI design draft"
 				>
@@ -633,19 +668,18 @@ function PortfolioView({ view, onChangeView }: { view: ViewMode; onChangeView: (
 					<div className="design-tag"><span>CONCEPT 02</span><strong>Jhocoffee</strong></div>
 				</div>
 
-				<div className="design-caption jhocoffee-caption">
-					<div>
-						<span>PERSONAL UI DESIGN / 02</span>
-						<h3>Jhocoffee</h3>
-					</div>
-					<p>
-						A cozy café storefront concept with a calm editorial layout,
-						featured drinks, a full menu preview, and a layered sign-in experience.
-						<a className="case-study-link" href="https://www.figma.com/design/pDnDO36JdqRY8Fb2P3yCdM/Untitled?t=IicLF2tbegGEWGA7-1" target="_blank" rel="noreferrer"><strong>Explore it ↗</strong></a>
-					</p>
-				</div>
 
-				<div
+
+				<div className="design-caption verne-caption">
+					<div>
+						<span>PERSONAL UI DESIGN / 03</span>
+						<h3>Verne&apos; Tastes</h3>
+					</div>
+					<div className="design-project-copy">
+						<p>A bakery concept featuring a curated cake collection, warm colours, and a simple shopping experience.</p>
+						<a className="case-study-link project-action-button" href="https://www.figma.com/design/NloAW4LVuFRC5HWgb0xNik/Untitled?node-id=0-1&amp;t=Jh0QiKCQ4IHSoEsE-1" target="_blank" rel="noreferrer"><strong>Explore it <ArrowUpRight /></strong></a>
+					</div>
+				</div>				<div
 					className="design-board verne-board"
 					aria-label="Layered Verne Tastes bakery and cake shop UI design draft"
 				>
@@ -694,17 +728,7 @@ function PortfolioView({ view, onChangeView }: { view: ViewMode; onChangeView: (
 
 					<div className="design-tag"><span>CONCEPT 03</span><strong>Verne&apos; Tastes</strong></div>
 				</div>
-				<div className="design-caption verne-caption">
-					<div>
-						<span>PERSONAL UI DESIGN / 03</span>
-						<h3>Verne&apos; Tastes</h3>
-					</div>
-					<p>
-						A warm artisan bakery concept combining elegant cake photography,
-						curated product cards, celebratory storytelling, and a layered account panel.
-						<a className="case-study-link" href="https://www.figma.com/design/NloAW4LVuFRC5HWgb0xNik/Untitled?node-id=0-1&amp;t=Jh0QiKCQ4IHSoEsE-1" target="_blank" rel="noreferrer"><strong>Explore it ↗</strong></a>
-					</p>
-				</div>
+
 
 
 			</section>
@@ -726,10 +750,10 @@ function PortfolioView({ view, onChangeView }: { view: ViewMode; onChangeView: (
 						<span>PERSONAL PROJECT / FULL-STACK</span>
 						<h3>J Clothes</h3>
 					</div>
-					<p>
-						I built J Clothes as a PHP-powered online store. It includes product browsing, a shopping bag, customer accounts, and a responsive layout.
-						<a className="case-study-link live-website-link" href="https://j-clothes-php-shop.vercel.app" target="_blank" rel="noreferrer"><strong>Live Website ↗</strong></a>
-					</p>
+					<div className="design-project-copy">
+						<p>I built J Clothes as a PHP-powered online store with product browsing, a shopping bag, customer accounts, and a responsive layout.</p>
+						<a className="case-study-link project-action-button live-website-link" href="https://j-clothes-php-shop.vercel.app" target="_blank" rel="noreferrer"><strong>Live Website <ArrowUpRight /></strong></a>
+					</div>
 				</div>
 
 				<div className="design-board screenshot-board jclothes-board" aria-label="J Clothes full-stack PHP project screenshots">
@@ -743,7 +767,7 @@ function PortfolioView({ view, onChangeView }: { view: ViewMode; onChangeView: (
 
 			<section className="selected-works-section section-wrap" id="selected-works">
 				<div className="section-heading">
-						<span className="section-index">05 / THESIS PROJECT</span>
+						<span className="section-index">06 / THESIS PROJECT</span>
 					<span className="section-rule" />
 				</div>
 
@@ -752,10 +776,10 @@ function PortfolioView({ view, onChangeView }: { view: ViewMode; onChangeView: (
 						<p className="eyebrow">THESIS PLATFORM / 2026</p>
 						<h2>CAVITE<br /><em>MotoTech.</em></h2>
 					</div>
-					<p>
-						A motorcycle parts and repair platform connecting Cavite riders with verified shops, searchable parts, workshop services, bookings, and account tools.
-						<a className="case-study-link live-website-link" href="https://cavitemototech.ogm1.com/#/" target="_blank" rel="noreferrer"><strong>Live Website ↗</strong></a>
-					</p>
+					<div className="design-project-copy">
+						<p>A motorcycle parts and repair platform that helps Cavite riders find parts, compare services, and connect with local workshops.</p>
+						<a className="case-study-link project-action-button live-website-link" href="https://cavitemototech.ogm1.com/#/" target="_blank" rel="noreferrer"><strong>Live Website <ArrowUpRight /></strong></a>
+					</div>
 				</div>
 
 				<div className="design-board cavite-board" aria-label="CAVITE MotoTech 2026 thesis platform QA case study">
