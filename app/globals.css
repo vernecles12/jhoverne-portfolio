@@ -1317,7 +1317,7 @@ button:focus-visible {
 .recruiter-project-image {
   display: block;
   width: 100%;
-  height: 190px;
+  height: 320px;
   object-fit: contain;
   object-position: center;
   padding: 10px;
@@ -1464,7 +1464,7 @@ button:focus-visible {
   .recruiter-body { padding-top: 54px; padding-bottom: 62px; }
   .recruiter-heading-spaced { margin-top: 44px; }
   .recruiter-section-heading { margin-bottom: 24px; }
-  .recruiter-project-image { height: 180px; }
+  .recruiter-project-image { height: 260px; }
   .recruiter-project-copy { min-height: 0; padding: 18px; }
   .recruiter-project-action { margin-top: 20px; }
   .recruiter-personal-grid { grid-template-columns: 1fr; }
