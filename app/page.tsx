@@ -13,23 +13,37 @@ const skillGroups = [
 	{
 		number: "02",
 		title: "Programming & databases",
-		description: "Foundational programming, data handling, and database skills.",
-		tags: ["PHP", "MySQL", "Python", "Database Management"],
+		description: "Programming languages and database fundamentals used in coursework and projects.",
+		tags: ["PHP", "MySQL", "Python"],
 		symbol: "01",
 	},
 	{
 		number: "03",
-		title: "UI / UX design",
-		description: "Designing interface ideas and creating interactive prototypes.",
-		tags: ["Figma", "UI Design", "Prototyping"],
+		title: "Design & content tools",
+		description: "Interface design and content management tools used in personal projects.",
+		tags: ["Figma", "WordPress"],
 		symbol: "✳",
 	},
 	{
 		number: "04",
 		title: "Computer & productivity tools",
-		description: "Everyday technical support and productivity applications.",
-		tags: ["Basic Troubleshooting", "Word", "Excel", "PowerPoint"],
+		description: "Productivity software for documents, spreadsheets, and presentations.",
+		tags: ["Word", "Excel", "PowerPoint"],
 		symbol: "⌘",
+	},
+	{
+		number: "05",
+		title: "Tools & platforms",
+		description: "Tools I use to build, collaborate, manage packages, and deploy web projects.",
+		tags: ["Git", "Visual Studio Code", "GitHub", "npm", "Vercel"],
+		symbol: "⌘",
+	},
+	{
+		number: "06",
+		title: "AI workflows & tools",
+		description: "AI coding tools that support research, implementation, and everyday development workflows.",
+		tags: ["Codex", "GitHub Copilot", "Claude Code"],
+		symbol: "✦",
 	},
 ];
 
@@ -47,22 +61,32 @@ function SkillLogo({ name }: { name: string }) {
 			return <svg aria-hidden="true" viewBox="0 0 40 40" className="recruiter-skill-logo"><path fill="#00758f" d="M4 25c4-7 10-11 17-9 4 1 4 5 8 5 3 0 5-3 7-7 1 6-1 12-6 14-4 2-8-1-12-1-5 0-9 2-14 5 3-4 4-6 0-7z" /><path fill="none" stroke="#f29111" strokeWidth="2" d="M18 18c2-5 6-7 11-7" /><circle cx="29" cy="12" r="1.3" fill="#f29111" /></svg>;
 		case "Python":
 			return <svg aria-hidden="true" viewBox="0 0 40 40" className="recruiter-skill-logo"><path fill="#3776ab" d="M19 4c-8 0-8 3-8 8v5h11v2H7c-4 0-5 4-5 8s2 7 6 7h4v-6c0-4 3-7 7-7h8c3 0 5-2 5-5v-5c0-5-4-7-13-7zm-4 5a2 2 0 1 1 0 4 2 2 0 0 1 0-4z" /><path fill="#ffd43b" d="M21 36c8 0 8-3 8-8v-5H18v-2h15c4 0 5-4 5-8s-2-7-6-7h-4v6c0 4-3 7-7 7h-8c-3 0-5 2-5 5v5c0 5 4 7 13 7zm4-5a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" /></svg>;
-		case "Database Management":
-			return <svg aria-hidden="true" viewBox="0 0 40 40" className="recruiter-skill-logo" fill="none" stroke="#77a9cf" strokeWidth="2.5"><ellipse cx="20" cy="9" rx="12" ry="5" /><path d="M8 9v21c0 3 5 5 12 5s12-2 12-5V9M8 19c0 3 5 5 12 5s12-2 12-5M8 29c0 3 5 5 12 5s12-2 12-5" /></svg>;
 		case "Figma":
 			return <svg aria-hidden="true" viewBox="0 0 40 40" className="recruiter-skill-logo"><path fill="#f24e1e" d="M12 4h8v10h-8a5 5 0 0 1 0-10z" /><path fill="#ff7262" d="M20 4h8a5 5 0 0 1 0 10h-8z" /><path fill="#a259ff" d="M12 14h8v10h-8a5 5 0 0 1 0-10z" /><circle cx="25" cy="19" r="5" fill="#1abcfe" /><path fill="#0acf83" d="M12 24h8v6a5 5 0 1 1-8-4z" /></svg>;
-		case "UI Design":
-			return <svg aria-hidden="true" viewBox="0 0 40 40" className="recruiter-skill-logo" fill="none" stroke="#d5d9e2" strokeWidth="2.2" strokeLinejoin="round"><rect x="5" y="6" width="30" height="27" rx="3" /><path d="M5 13h30M11 10h1m4 0h1M11 19h8m-8 5h13m-13 5h7" /><circle cx="28" cy="23" r="3.5" /></svg>;
-		case "Prototyping":
-			return <svg aria-hidden="true" viewBox="0 0 40 40" className="recruiter-skill-logo" fill="none" stroke="#d5d9e2" strokeWidth="2.2" strokeLinejoin="round"><rect x="4" y="5" width="14" height="12" rx="2" /><rect x="22" y="23" width="14" height="12" rx="2" /><path d="M18 11h7a4 4 0 0 1 4 4v8M11 17v7a4 4 0 0 0 4 4h7" /><circle cx="29" cy="15" r="2" fill="#d5d9e2" /><circle cx="11" cy="28" r="2" fill="#d5d9e2" /></svg>;
-		case "Basic Troubleshooting":
-			return <svg aria-hidden="true" viewBox="0 0 40 40" className="recruiter-skill-logo" fill="none" stroke="#d5d9e2" strokeWidth="2.3" strokeLinecap="round" strokeLinejoin="round"><path d="M23 7a9 9 0 0 0-10 12L5 27a4 4 0 0 0 6 6l8-8A9 9 0 0 0 31 15l-6 6-6-6z" /><path d="m24 8 7 7" /></svg>;
+		case "WordPress":
+			return <svg aria-hidden="true" viewBox="0 0 40 40" className="recruiter-skill-logo"><circle cx="20" cy="20" r="18" fill="#21759b" /><text x="8" y="28" fill="#fff" fontSize="24" fontWeight="700" fontFamily="Georgia, serif">W</text></svg>;
 		case "Word":
 			return <svg aria-hidden="true" viewBox="0 0 40 40" className="recruiter-skill-logo"><path fill="#185abd" d="M7 5h23a4 4 0 0 1 4 4v22a4 4 0 0 1-4 4H7z" /><path fill="#2b7cd3" d="M6 10h13v20H6a3 3 0 0 1-3-3V13a3 3 0 0 1 3-3z" /><text x="6" y="25" fill="#fff" fontSize="15" fontWeight="700" fontFamily="Arial, sans-serif">W</text></svg>;
 		case "Excel":
 			return <svg aria-hidden="true" viewBox="0 0 40 40" className="recruiter-skill-logo"><path fill="#107c41" d="M7 5h23a4 4 0 0 1 4 4v22a4 4 0 0 1-4 4H7z" /><path fill="#21a366" d="M6 10h13v20H6a3 3 0 0 1-3-3V13a3 3 0 0 1 3-3z" /><text x="6" y="25" fill="#fff" fontSize="15" fontWeight="700" fontFamily="Arial, sans-serif">X</text></svg>;
 		case "PowerPoint":
 			return <svg aria-hidden="true" viewBox="0 0 40 40" className="recruiter-skill-logo"><path fill="#c43e1c" d="M7 5h23a4 4 0 0 1 4 4v22a4 4 0 0 1-4 4H7z" /><circle cx="19" cy="20" r="10" fill="#ed6c47" /><text x="15" y="25" fill="#fff" fontSize="14" fontWeight="700" fontFamily="Arial, sans-serif">P</text></svg>;
+		case "Git":
+			return <svg aria-hidden="true" viewBox="0 0 40 40" className="recruiter-skill-logo" fill="none" stroke="#f05032" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M12 10v20m0-10 16-10m-16 10 16 10" /><circle cx="12" cy="10" r="3.5" fill="#f05032" /><circle cx="28" cy="10" r="3.5" fill="#f05032" /><circle cx="12" cy="30" r="3.5" fill="#f05032" /><circle cx="28" cy="30" r="3.5" fill="#f05032" /></svg>;
+		case "Visual Studio Code":
+			return <svg aria-hidden="true" viewBox="0 0 40 40" className="recruiter-skill-logo"><path fill="#007acc" d="m29 4 7 3v26l-7 3-17-13-5 4-4-3v-4l9-7L4 9V6l4-3 4 4z" /><path fill="#29b6f6" d="m12 15 14-9v28l-14-9-5 4-4-3v-4l9-7-9-7V5l4-2z" /><path fill="#0065a9" d="m12 15 14 5-14 5-5 4-4-3v-4l9-7-9-7V5l4-2z" /></svg>;
+		case "GitHub":
+			return <svg aria-hidden="true" viewBox="0 0 40 40" className="recruiter-skill-logo"><circle cx="20" cy="20" r="17" fill="#f0f6fc" /><path fill="#161b22" d="M13 31c-5-2-7-6-7-11a14 14 0 0 1 28 0c0 6-3 10-8 12v-4c0-2-1-3-2-3 4 0 7-2 7-7 0-2-1-4-2-5 0-2 0-3-1-4-2 0-3 1-4 2-3-1-6-1-9 0-1-1-3-2-4-2-1 1-1 3-1 4-2 2-2 4-2 5 0 5 3 7 7 7-1 1-2 2-2 4v3z" /></svg>;
+		case "npm":
+			return <svg aria-hidden="true" viewBox="0 0 40 40" className="recruiter-skill-logo"><path fill="#cb3837" d="M3 9h34v22H20v-5h-5v5H3z" /><text x="7" y="23" fill="#fff" fontSize="12" fontWeight="700" fontFamily="Arial, sans-serif">npm</text></svg>;
+		case "Vercel":
+			return <svg aria-hidden="true" viewBox="0 0 40 40" className="recruiter-skill-logo"><path fill="#f6f7f3" d="M20 5 38 35H2z" /></svg>;
+		case "Codex":
+			return <svg aria-hidden="true" viewBox="0 0 40 40" className="recruiter-skill-logo" fill="none" stroke="#10a37f" strokeWidth="3" strokeLinecap="round"><circle cx="20" cy="20" r="14" /><path d="M26 12a10 10 0 1 0 0 16M20 7v6m0 14v6M7 20h6m14 0h6" /></svg>;
+		case "GitHub Copilot":
+			return <svg aria-hidden="true" viewBox="0 0 40 40" className="recruiter-skill-logo"><path fill="#d8dce8" d="M7 15a5 5 0 0 1 5-5h16a5 5 0 0 1 5 5v12a5 5 0 0 1-5 5H12a5 5 0 0 1-5-5z" /><path fill="#242938" d="M12 18a4 4 0 0 1 8 0v3h-8zm10 0a4 4 0 0 1 8 0v3h-8z" /><path fill="#8f74ff" d="M6 12 10 5l5 4m19 3-4-7-5 4" /></svg>;
+		case "Claude Code":
+			return <svg aria-hidden="true" viewBox="0 0 40 40" className="recruiter-skill-logo" fill="none" stroke="#d97757" strokeWidth="2.8" strokeLinecap="round"><path d="M20 4v9m0 14v9M4 20h9m14 0h9M8.7 8.7l6.4 6.4m9.8 9.8 6.4 6.4m0-22.6-6.4 6.4m-9.8 9.8-6.4 6.4" /><circle cx="20" cy="20" r="5" fill="#d97757" stroke="none" /></svg>;
 		default:
 			return <svg aria-hidden="true" viewBox="0 0 40 40" className="recruiter-skill-logo" fill="none" stroke="#d5d9e2" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><circle cx="20" cy="20" r="13" /><path d="M20 12v16m-8-8h16" /></svg>;
 	}
@@ -552,8 +576,9 @@ function PortfolioView({ view, onChangeView }: { view: ViewMode; onChangeView: (
 								<p>{group.description}</p>
 								<div className="tag-list">
 									{group.tags.map((tag) => (
-										<span className="tag" key={tag}>
-											{tag}
+										<span className="tag skill-logo-tag" key={tag}>
+											<SkillLogo name={tag} />
+											<span>{tag}</span>
 										</span>
 									))}
 								</div>

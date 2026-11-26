@@ -139,6 +139,8 @@ a:hover .arrow-icon { transform: translate(2px, -2px); }
 .skill-card p { min-height: 40px; max-width: 390px; margin: 0; color: #aab8ae; font-size: 12px; line-height: 1.7; }
 .tag-list { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 21px; }
 .tag { border: 1px solid rgba(215,251,104,.25); border-radius: 2px; color: #d8e6cd; padding: 6px 8px; font: 9px var(--mono); }
+.skill-logo-tag { display: inline-flex; align-items: center; gap: 6px; padding: 4px 7px; }
+.skill-logo-tag .recruiter-skill-logo { width: 17px; height: 17px; flex: 0 0 17px; }
 .strengths-row { display: grid; grid-template-columns: 180px 1fr; gap: 28px; padding-top: 37px; margin-top: 45px; border-top: 1px solid rgba(255,255,255,.16); }
 .strengths-label { color: #91a097; font: 9px var(--mono); letter-spacing: 1px; padding-top: 5px; }
 .strengths-list { display: flex; flex-wrap: wrap; gap: 10px 22px; }
