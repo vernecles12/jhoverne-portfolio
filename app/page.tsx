@@ -90,50 +90,50 @@ function PortfolioViewIcon() {
 	);
 }
 
+function ViewModeSwitcher({ view, onChange }: { view: ViewMode; onChange: (nextView: ViewMode) => void }) {
+	return (
+		<div className="view-mode-switch" role="group" aria-label="Choose a portfolio view">
+			<button
+				type="button"
+				className={`view-mode-button ${view === "recruiter" ? "is-active" : ""}`}
+				aria-pressed={view === "recruiter"}
+				onClick={() => onChange("recruiter")}
+			>
+				<RecruiterViewIcon />
+				Recruiter View
+			</button>
+			<button
+				type="button"
+				className={`view-mode-button ${view === "portfolio" ? "is-active" : ""}`}
+				aria-pressed={view === "portfolio"}
+				onClick={() => onChange("portfolio")}
+			>
+				<PortfolioViewIcon />
+				Portfolio View
+			</button>
+		</div>
+	);
+}
+
 export default function Home() {
 	const [view, setView] = useState<ViewMode>("portfolio");
 
 	return (
 		<main className="site-shell">
-			<div className="view-mode-bar">
-				<div className="view-mode-intro">
-					<span className="view-mode-overline">EXPLORE THIS SITE</span>
-					<span className="view-mode-caption">Choose the experience that suits you.</span>
-				</div>
-				<div className="view-mode-switch" role="group" aria-label="Choose a portfolio view">
-					<button
-						type="button"
-						className={`view-mode-button ${view === "recruiter" ? "is-active" : ""}`}
-						aria-pressed={view === "recruiter"}
-						onClick={() => setView("recruiter")}
-					>
-						<RecruiterViewIcon />
-						Recruiter View
-					</button>
-					<button
-						type="button"
-						className={`view-mode-button ${view === "portfolio" ? "is-active" : ""}`}
-						aria-pressed={view === "portfolio"}
-						onClick={() => setView("portfolio")}
-					>
-						<PortfolioViewIcon />
-						Portfolio View
-					</button>
-				</div>
-			</div>
+
 
 			<div key={view} className={`view-stage view-stage-${view}`}>
 				{view === "recruiter" ? (
-					<RecruiterView onShowPortfolio={() => setView("portfolio")} />
+					<RecruiterView view={view} onChangeView={setView} onShowPortfolio={() => setView("portfolio")} />
 				) : (
-					<PortfolioView />
+					<PortfolioView view={view} onChangeView={setView} />
 				)}
 			</div>
 		</main>
 	);
 }
 
-function RecruiterView({ onShowPortfolio }: { onShowPortfolio: () => void }) {
+function RecruiterView({ view, onChangeView, onShowPortfolio }: { view: ViewMode; onChangeView: (nextView: ViewMode) => void; onShowPortfolio: () => void }) {
 	return (
 		<div className="recruiter-view">
 			<header className="recruiter-header">
@@ -141,10 +141,31 @@ function RecruiterView({ onShowPortfolio }: { onShowPortfolio: () => void }) {
 					<span className="brand-mark">JM</span>
 					<span className="brand-name">Jhoverne Morcilla</span>
 				</a>
-				<span className="recruiter-header-note">RECRUITER SNAPSHOT / 2026</span>
-				<a className="button button-dark recruiter-header-contact" href="mailto:vhaniemorcilla4785@gmail.com">
-					Email me <ArrowUpRight />
-				</a>
+				<nav className="recruiter-nav" aria-label="Recruiter navigation">
+					<a href="#recruiter-about">About</a>
+					<a href="#recruiter-skills">Skills</a>
+					<a href="#recruiter-projects">Projects</a>
+					<a href="#recruiter-personal-projects">Personal Projects</a>
+					<a href="#recruiter-education">Education</a>
+				</nav>
+				<details className="recruiter-mobile-menu">
+					<summary aria-label="Open recruiter navigation"><span /><span /></summary>
+					<nav aria-label="Recruiter mobile navigation">
+						<a href="#recruiter-about">About</a>
+						<a href="#recruiter-skills">Skills</a>
+						<a href="#recruiter-projects">Thesis Project</a>
+						<a href="#recruiter-personal-projects">Personal Projects</a>
+						<a href="#recruiter-education">Education</a>
+						<div className="mobile-menu-actions">
+							<a className="header-cta" href="mailto:vhaniemorcilla4785@gmail.com">Let&apos;s talk <ArrowUpRight /></a>
+							<ViewModeSwitcher view={view} onChange={onChangeView} />
+						</div>
+					</nav>
+				</details>
+				<div className="header-actions">
+					<ViewModeSwitcher view={view} onChange={onChangeView} />
+					<a className="header-cta" href="mailto:vhaniemorcilla4785@gmail.com">Let&apos;s talk <ArrowUpRight /></a>
+				</div>
 			</header>
 
 			<section className="recruiter-hero" id="recruiter-home">
@@ -156,9 +177,7 @@ function RecruiterView({ onShowPortfolio }: { onShowPortfolio: () => void }) {
 					<p className="hero-kicker">BS INFORMATION TECHNOLOGY STUDENT</p>
 					<h1>Jhoverne <span>Morcilla.</span></h1>
 					<p className="recruiter-lead">
-						An aspiring IT professional seeking an On-the-Job Training opportunity
-						to apply classroom learning, strengthen practical skills, and contribute
-						to a collaborative team.
+						I&apos;m an IT student looking for an OJT opportunity where I can put what I&apos;ve learned into practice, keep building my skills, and be a helpful part of the team.
 					</p>
 					<div className="recruiter-hero-actions">
 						<a className="button button-primary" href="/resume.pdf" target="_blank" rel="noreferrer">
@@ -193,7 +212,7 @@ function RecruiterView({ onShowPortfolio }: { onShowPortfolio: () => void }) {
 					<span className="section-index">01 / PROFESSIONAL SUMMARY</span>
 					<span className="section-rule" />
 				</div>
-				<div className="recruiter-summary-grid">
+				<div className="recruiter-summary-grid" id="recruiter-about">
 					<div className="recruiter-summary-copy">
 						<h2>Motivated to learn.<br /><em>Ready to contribute.</em></h2>
 						<p>
@@ -216,7 +235,7 @@ function RecruiterView({ onShowPortfolio }: { onShowPortfolio: () => void }) {
 					</aside>
 				</div>
 
-				<div className="recruiter-section-heading recruiter-heading-spaced">
+				<div className="recruiter-section-heading recruiter-heading-spaced" id="recruiter-skills">
 					<span className="section-index">02 / TECHNICAL SKILLS</span>
 					<span className="section-rule" />
 				</div>
@@ -237,33 +256,40 @@ function RecruiterView({ onShowPortfolio }: { onShowPortfolio: () => void }) {
 					<div>{strengths.map((strength) => <span key={strength}>{strength}</span>)}</div>
 				</div>
 
-				<div className="recruiter-section-heading recruiter-heading-spaced">
-					<span className="section-index">03 / SELECTED PROJECTS</span>
+				<div className="recruiter-section-heading recruiter-heading-spaced" id="recruiter-projects">
+					<span className="section-index">03 / THESIS PROJECT</span>
 					<span className="section-rule" />
 				</div>
-				<div className="recruiter-project-grid">
-					<article className="recruiter-project-card recruiter-project-featured">
-						<span className="recruiter-project-label">THESIS PLATFORM / 2026</span>
-						<h3>CAVITE MotoTech</h3>
-						<p>A motorcycle parts and repair platform connecting Cavite riders with verified shops, searchable parts, workshop services, and bookings.</p>
-						<a href="https://cavitemototech.ogm1.com/#/" target="_blank" rel="noreferrer">Open live platform <ArrowUpRight /></a>
-					</article>
-					<article className="recruiter-project-card">
-						<span className="recruiter-project-label">FULL-STACK PROJECT / 04</span>
-						<h3>J Clothes</h3>
-						<p>A PHP-powered clothing storefront with product browsing, shopping bag interactions, account access, and a responsive shopping experience.</p>
-						<a href="https://j-clothes-php-shop.vercel.app" target="_blank" rel="noreferrer">Open live website <ArrowUpRight /></a>
-					</article>
-					<article className="recruiter-project-card">
-						<span className="recruiter-project-label">UI DESIGN CONCEPTS</span>
-						<h3>Petal &amp; Stem, Jhocoffee, and Verne&apos; Tastes</h3>
-						<p>Interface explorations for a flower shop, café storefront, and artisan bakery, focused on layout, visual hierarchy, and shopping flows.</p>
-						<span className="recruiter-project-note">Design drafts are featured in Portfolio View.</span>
-					</article>
+				<div className="recruiter-project-grid recruiter-thesis-grid">
+	<article className="recruiter-project-card recruiter-project-featured">
+							<span className="recruiter-project-label">THESIS PLATFORM / 2026</span>
+							<h3>CAVITE MotoTech</h3>
+							<p>A motorcycle parts and repair platform connecting Cavite riders with verified shops, searchable parts, workshop services, and bookings.</p>
+							<a href="https://cavitemototech.ogm1.com/#/" target="_blank" rel="noreferrer">Open live platform <ArrowUpRight /></a>
+						</article>
 				</div>
 
-				<div className="recruiter-section-heading recruiter-heading-spaced">
-					<span className="section-index">04 / EDUCATION &amp; CERTIFICATE</span>
+				<div className="recruiter-section-heading recruiter-heading-spaced" id="recruiter-personal-projects">
+					<span className="section-index">04 / PERSONAL PROJECTS</span>
+					<span className="section-rule" />
+				</div>
+				<div className="recruiter-project-grid recruiter-personal-grid">
+	<article className="recruiter-project-card">
+							<span className="recruiter-project-label">PERSONAL PROJECT / FULL-STACK</span>
+							<h3>J Clothes</h3>
+							<p>An online clothing shop I built with PHP, with product browsing, a shopping bag, and customer account features.</p>
+							<a href="https://j-clothes-php-shop.vercel.app" target="_blank" rel="noreferrer">Open live website <ArrowUpRight /></a>
+						</article>
+						<article className="recruiter-project-card">
+							<span className="recruiter-project-label">UI DESIGN CONCEPTS</span>
+							<h3>Petal &amp; Stem, Jhocoffee, and Verne&apos; Tastes</h3>
+							<p>A collection of interface concepts for a flower shop, café, and bakery, exploring clear layouts and simple shopping experiences.</p>
+							<span className="recruiter-project-note">Design drafts are featured in Portfolio View.</span>
+						</article>
+				</div>
+
+				<div className="recruiter-section-heading recruiter-heading-spaced" id="recruiter-education">
+					<span className="section-index">05 / EDUCATION &amp; CERTIFICATE</span>
 					<span className="section-rule" />
 				</div>
 				<div className="recruiter-education-grid">
@@ -305,7 +331,7 @@ function RecruiterView({ onShowPortfolio }: { onShowPortfolio: () => void }) {
 	);
 }
 
-function PortfolioView() {
+function PortfolioView({ view, onChangeView }: { view: ViewMode; onChangeView: (nextView: ViewMode) => void }) {
 	return (
 		<div className="portfolio-view">
 			<header className="site-header">
@@ -322,9 +348,10 @@ function PortfolioView() {
 					))}
 				</nav>
 
-				<a className="header-cta" href="mailto:vhaniemorcilla4785@gmail.com">
-					Let&apos;s talk <ArrowUpRight />
-				</a>
+				<div className="header-actions">
+					<ViewModeSwitcher view={view} onChange={onChangeView} />
+					<a className="header-cta" href="mailto:vhaniemorcilla4785@gmail.com">Let&apos;s talk <ArrowUpRight /></a>
+				</div>
 
 				<details className="mobile-menu">
 					<summary aria-label="Open navigation menu">
@@ -337,7 +364,10 @@ function PortfolioView() {
 								{item.label}
 							</a>
 						))}
-						<a href="mailto:vhaniemorcilla4785@gmail.com">Let&apos;s talk</a>
+						<div className="mobile-menu-actions">
+							<a className="header-cta" href="mailto:vhaniemorcilla4785@gmail.com">Let&apos;s talk <ArrowUpRight /></a>
+							<ViewModeSwitcher view={view} onChange={onChangeView} />
+						</div>
 					</nav>
 				</details>
 			</header>
@@ -676,9 +706,24 @@ function PortfolioView() {
 					</p>
 				</div>
 
+
+			</section>
+
+			<section className="personal-projects-section section-wrap" id="personal-projects">
+				<div className="section-heading">
+					<span className="section-index">04 / PERSONAL PROJECTS</span>
+					<span className="section-rule" />
+				</div>
+				<div className="designs-heading personal-projects-heading">
+					<div>
+						<p className="eyebrow">BUILT OUTSIDE THE CLASSROOM</p>
+						<h2>Personal<br /><em>projects.</em></h2>
+					</div>
+					<p>Some of the work I&apos;ve built while practising web development, exploring ideas, and learning by making things.</p>
+				</div>
 				<div className="design-caption jclothes-caption">
 					<div>
-						<span>FULL-STACK PROJECT / 04</span>
+						<span>PERSONAL PROJECT / FULL-STACK</span>
 						<h3>J Clothes</h3>
 					</div>
 					<p>
@@ -700,7 +745,7 @@ function PortfolioView() {
 
 			<section className="selected-works-section section-wrap" id="selected-works">
 				<div className="section-heading">
-						<span className="section-index">05 / SELECTED WORKS</span>
+						<span className="section-index">05 / THESIS PROJECT</span>
 					<span className="section-rule" />
 				</div>
 
