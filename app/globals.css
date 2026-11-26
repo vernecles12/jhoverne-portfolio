@@ -1788,6 +1788,36 @@ button:focus-visible {
 .site-shell[data-theme="dark"] .recruiter-certificate-card img { background: #f5f6f1; }
 .site-shell[data-theme="dark"] .recruiter-footer { color: var(--theme-muted); }
 
+/* Social profile links shared by both contact sections. */
+.social-links { display: grid; gap: 9px; }
+.social-links-portfolio { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 22px; }
+.social-links a {
+  min-width: 0;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 0 11px;
+  border: 1px solid rgba(120, 140, 96, .38);
+  border-radius: 8px;
+  color: #465448;
+  font-size: 11px;
+  font-weight: 700;
+  transition: background-color .2s ease, border-color .2s ease, color .2s ease, transform .2s ease;
+}
+.social-links a:hover { transform: translateY(-2px); border-color: #8ba83e; background: rgba(215, 251, 104, .12); color: var(--ink); }
+.social-icon { width: 18px; height: 18px; flex: 0 0 18px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.social-links a .arrow-icon { width: 13px; height: 13px; margin-left: auto; flex: 0 0 13px; }
+.social-links-recruiter { grid-template-columns: repeat(2, minmax(0, 1fr)); width: min(100%, 360px); margin-top: 8px; }
+.social-links-recruiter a { min-height: 40px; padding: 0 9px; color: #e2e8e2; border-color: rgba(255, 255, 255, .26); font-size: 10px; }
+.social-links-recruiter a:hover { color: var(--lime); background: rgba(255, 255, 255, .06); border-color: rgba(215, 251, 104, .65); }
+.site-shell[data-theme="dark"] .social-links-portfolio a { color: var(--theme-text); border-color: rgba(215, 251, 104, .34); }
+.site-shell[data-theme="dark"] .social-links-portfolio a:hover { color: var(--lime); background: rgba(215, 251, 104, .08); }
+@media (max-width: 760px) {
+  .social-links-portfolio { grid-template-columns: 1fr 1fr; }
+  .social-links a { gap: 7px; padding: 0 8px; }
+}
+
 @media (max-width: 1050px) {
   .recruiter-skills-panel {
     margin-right: -8.14%;

@@ -170,6 +170,40 @@ function ThemeToggle({ theme, onToggle }: { theme: ThemeMode; onToggle: () => vo
 	);
 }
 
+const socialProfiles = [
+	{ name: "LinkedIn", href: "https://www.linkedin.com/in/jhoverne-morcilla-8b4588452/" },
+	{ name: "Facebook", href: "https://www.facebook.com/profile.php?id=100091918256307" },
+	{ name: "GitHub", href: "https://github.com/vernecles12" },
+	{ name: "Instagram", href: "https://www.instagram.com/define.verne/?hl=en" },
+];
+
+function SocialIcon({ name }: { name: string }) {
+	switch (name) {
+		case "LinkedIn":
+			return <svg aria-hidden="true" viewBox="0 0 24 24" className="social-icon"><path d="M5 9v10M5 5v.01M10 19v-6a4 4 0 0 1 8 0v6M10 10v9" /></svg>;
+		case "Facebook":
+			return <svg aria-hidden="true" viewBox="0 0 24 24" className="social-icon"><path d="M14 21v-8h3l.5-4H14V7c0-1.2.4-2 2-2h2V1.5A22 22 0 0 0 15 1c-3 0-5 1.8-5 5v3H7v4h3v8" /></svg>;
+		case "GitHub":
+			return <svg aria-hidden="true" viewBox="0 0 24 24" className="social-icon"><path d="M9 19c-4 1-4-2-6-2m12 4v-3.1a2.7 2.7 0 0 0-.8-2.1c2.7-.3 5.5-1.3 5.5-6A4.7 4.7 0 0 0 18.5 6.5 4.4 4.4 0 0 0 18.4 3S17.4 2.7 15 4.3a12 12 0 0 0-6 0C6.6 2.7 5.6 3 5.6 3a4.4 4.4 0 0 0-.1 3.5A4.7 4.7 0 0 0 4.2 9.8c0 4.7 2.8 5.7 5.5 6A2.7 2.7 0 0 0 9 18v3" /><path d="M9 21c-4 0-6-2-6-5" /></svg>;
+		default:
+			return <svg aria-hidden="true" viewBox="0 0 24 24" className="social-icon"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><path d="M17.5 6.5h.01" /></svg>;
+	}
+}
+
+function SocialLinks({ variant }: { variant: "portfolio" | "recruiter" }) {
+	return (
+		<nav className={`social-links social-links-${variant}`} aria-label="Social profiles">
+			{socialProfiles.map((profile) => (
+				<a key={profile.name} href={profile.href} target="_blank" rel="noreferrer" aria-label={`Visit my ${profile.name} profile`}>
+					<SocialIcon name={profile.name} />
+					<span>{profile.name}</span>
+					<ArrowUpRight />
+				</a>
+			))}
+		</nav>
+	);
+}
+
 function ViewModeSwitcher({ view, onChange }: { view: ViewMode; onChange: (nextView: ViewMode) => void }) {
 	return (
 		<div className="view-mode-switch" role="group" aria-label="Choose a portfolio view">
@@ -417,6 +451,7 @@ function RecruiterView({ view, onChangeView, onShowPortfolio, theme, onToggleThe
 						<a className="button button-primary" href="mailto:vhaniemorcilla4785@gmail.com">Email Jhoverne <ArrowUpRight /></a>
 						<a className="recruiter-contact-detail" href="tel:+639197750461">+63 919 775 0461</a>
 						<span className="recruiter-contact-detail">Cavite, Philippines</span>
+						<SocialLinks variant="recruiter" />
 					</div>
 				</div>
 			</section>
@@ -973,6 +1008,7 @@ function PortfolioView({ view, onChangeView, theme, onToggleTheme }: { view: Vie
 						<a href="mailto:vhaniemorcilla4785@gmail.com" className="contact-item"><span className="contact-label">EMAIL</span><span>vhaniemorcilla4785@gmail.com</span><ArrowUpRight /></a>
 						<a href="tel:+639197750461" className="contact-item"><span className="contact-label">PHONE</span><span>+63 919 775 0461</span><ArrowUpRight /></a>
 						<div className="contact-item contact-static"><span className="contact-label">LOCATION</span><span>Cavite, Philippines</span><span className="location-pin">⌖</span></div>
+						<SocialLinks variant="portfolio" />
 						<div className="reference-note">PROFESSIONAL REFERENCES<br /><strong>Available this soon.</strong></div>
 					</div>
 				</div>
